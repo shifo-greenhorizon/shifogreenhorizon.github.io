@@ -1,1574 +1,1279 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Shifo GreenHorizon — A Premier 110-Hectare Agribusiness Development Initiative in Somaliland. Investor-grade agricultural infrastructure, protected cultivation, and sustainable food production." />
-  <meta name="theme-color" content="#0f3a20" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Shifo GreenHorizon — A Premier 110-Hectare Agribusiness Development Initiative in Borama, Somaliland. 13 operating greenhouses, 10-Ha papaya orchard, 82,100 permanent trees."/>
+  <meta name="theme-color" content="#0f3a20"/>
   <title>Shifo GreenHorizon — Cultivating a Sustainable, High-Growth Agricultural Future</title>
-
   <style>
-    /* ═══════════════════════════════════════════════════════════════
-       RESET & CUSTOM PROPERTIES
-    ═══════════════════════════════════════════════════════════════ */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    :root {
-      /* Brand palette */
-      --canvas:       #faf9f6;
-      --canvas-2:     #f2f0eb;
-      --canvas-dark:  #ede9e1;
-      --forest:       #0f3a20;
-      --forest-mid:   #1e5c36;
-      --forest-lite:  #e8f0eb;
-      --gold:         #e67e22;
-      --gold-deep:    #c96a12;
-      --gold-pale:    #fdf0e4;
-      --charcoal:     #1a1a1a;
-      --body-text:    #3a3a3a;
-      --muted:        #7a8a80;
-      --rule:         rgba(15, 58, 32, 0.12);
-      --rule-gold:    rgba(230, 126, 34, 0.3);
-
-      /* Typography */
-      --font: 'Inter', 'Helvetica Neue', Arial, system-ui, sans-serif;
-
-      /* Spacing rhythm */
-      --section-pad: clamp(80px, 10vw, 140px);
-      --container:   1080px;
-      --gutter:      clamp(24px, 5vw, 60px);
-
-      /* Motion */
-      --ease: cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
-    html {
-      scroll-behavior: smooth;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    body {
-      font-family: var(--font);
-      background-color: var(--canvas);
-      color: var(--body-text);
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
-    ::selection {
-      background: var(--gold);
-      color: var(--forest);
-    }
-
-    /* ═══════════════════════════════════════════════════════════════
-       LAYOUT UTILITIES
-    ═══════════════════════════════════════════════════════════════ */
-    .container {
-      max-width: var(--container);
-      margin-inline: auto;
-      padding-inline: var(--gutter);
-    }
-
-    .section {
-      padding-block: var(--section-pad);
-    }
-
-    .section--alt {
-      background-color: var(--canvas-2);
-    }
-
-    .section--dark {
-      background-color: var(--forest);
-    }
-
-    /* ═══════════════════════════════════════════════════════════════
-       TYPOGRAPHY SCALE
-    ═══════════════════════════════════════════════════════════════ */
-    .eyebrow {
-      display: inline-block;
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.1rem;
-    }
-
-    .eyebrow::before {
-      content: '';
-      display: inline-block;
-      width: 24px;
-      height: 2px;
-      background: var(--gold);
-      vertical-align: middle;
-      margin-right: 10px;
-      margin-bottom: 1px;
-    }
-
-    h1, h2, h3, h4 {
-      color: var(--forest);
-      line-height: 1.15;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    .display-title {
-      font-size: clamp(2rem, 4.5vw, 3.6rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.1;
-      color: var(--forest);
-    }
-
-    .display-title em {
-      font-style: italic;
-      font-weight: 300;
-      color: var(--forest-mid);
-    }
-
-    .section-title {
-      font-size: clamp(1.5rem, 3vw, 2.4rem);
-      font-weight: 700;
-      color: var(--forest);
-      margin-bottom: 1.2rem;
-    }
-
-    .section-title--light {
-      color: #ffffff;
-    }
-
-    .sub-heading {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--forest);
-      margin-bottom: 1.2rem;
-      margin-top: 2.5rem;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .sub-heading::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--rule);
-    }
-
-    p {
-      font-size: 1.02rem;
-      line-height: 1.85;
-      color: var(--body-text);
-      max-width: 68ch;
-    }
-
-    p.wide { max-width: none; }
-
-    /* ═══════════════════════════════════════════════════════════════
-       DECORATIVE ELEMENTS
-    ═══════════════════════════════════════════════════════════════ */
-    .gold-rule {
-      width: 56px;
-      height: 3px;
-      background: linear-gradient(to right, var(--gold), var(--gold-deep));
-      border-radius: 2px;
-      margin-bottom: 2rem;
-    }
-
-    .gold-rule--center { margin-inline: auto; }
-
-    .horizon-line {
-      width: 100%;
-      height: 1px;
-      background: linear-gradient(to right, transparent, var(--rule-gold), transparent);
-      margin-block: 0;
-    }
-
-    /* ═══════════════════════════════════════════════════════════════
-       ██ NAVIGATION BAR
-    ═══════════════════════════════════════════════════════════════ */
-    #site-nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(250, 249, 246, 0.94);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--rule);
-      transition: box-shadow 0.3s var(--ease);
-    }
-
-    #site-nav.scrolled {
-      box-shadow: 0 4px 32px rgba(15, 58, 32, 0.08);
-    }
-
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 68px;
-      gap: 2rem;
-    }
-
-    /* ── Logo in nav ── */
-    .nav-brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-      flex-shrink: 0;
-    }
-
-    .nav-brand-logo-wrap {
-      width: 40px;
-      height: 40px;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border-radius: 50%;
-      border: 2px solid rgba(15, 58, 32, 0.15);
-    }
-
-    .nav-brand-logo-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .nav-brand-name {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--forest);
-      letter-spacing: -0.01em;
-      line-height: 1.2;
-    }
-
-    .nav-brand-name span {
-      display: block;
-      font-size: 0.6rem;
-      font-weight: 500;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2.2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--body-text);
-      text-decoration: none;
-      transition: color 0.2s;
-      padding-bottom: 2px;
-      border-bottom: 2px solid transparent;
-      transition: color 0.2s, border-color 0.2s;
-    }
-
-    .nav-links a:hover {
-      color: var(--forest);
-      border-bottom-color: var(--gold);
-    }
-
-    .nav-cta-btn {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #fff;
-      background: var(--forest);
-      padding: 11px 22px;
-      text-decoration: none;
-      border-radius: 2px;
-      transition: background 0.25s var(--ease), transform 0.2s;
-      white-space: nowrap;
-    }
-
-    .nav-cta-btn:hover {
-      background: var(--forest-mid);
-      transform: translateY(-1px);
-    }
-
-    /* ═══════════════════════════════════════════════════════════════
-       ██ HERO / HEADER
-    ═══════════════════════════════════════════════════════════════ */
-    #hero {
-      background-color: var(--canvas);
-      padding-top: clamp(64px, 10vw, 120px);
-      padding-bottom: clamp(64px, 10vw, 120px);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Subtle radial glow behind logo */
-    #hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 50%;
-      transform: translateX(-50%);
-      width: 700px; height: 700px;
-      background: radial-gradient(ellipse at center,
-        rgba(230, 126, 34, 0.07) 0%,
-        rgba(15, 58, 32, 0.04) 40%,
-        transparent 70%);
-      pointer-events: none;
-    }
-
-    /* ── LOGO CONTAINER — robust rendering solution ── */
-    .hero-logo-wrap {
-      /* 1. Flexbox centering container */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      /* 2. Constrain width so emblem never overpowers layout */
-      width: 100%;
-      max-width: 280px;
-      margin-inline: auto;
-      margin-bottom: clamp(2rem, 4vw, 3rem);
-
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-logo-wrap img {
-      /* 3. Prevent warping/stretching; preserve circular emblem integrity */
-      display: block;
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      object-position: center;
-
-      /* 4. Crisp rendering at all DPI */
-      image-rendering: -webkit-optimize-contrast;
-      image-rendering: crisp-edges;
-
-      /* Remove any white box if PNG has transparency */
-      background: transparent;
-
-      /* Subtle shadow to lift the emblem off the canvas */
-      filter: drop-shadow(0 8px 24px rgba(15, 58, 32, 0.12))
-              drop-shadow(0 2px 6px rgba(15, 58, 32, 0.08));
-
-      transition: transform 0.5s var(--ease), filter 0.5s var(--ease);
-    }
-
-    .hero-logo-wrap img:hover {
-      transform: scale(1.03);
-      filter: drop-shadow(0 12px 36px rgba(15, 58, 32, 0.18))
-              drop-shadow(0 4px 10px rgba(230, 126, 34, 0.15));
-    }
-
-    /* 4. Responsive media queries for logo scaling */
-    @media (max-width: 768px) {
-      .hero-logo-wrap {
-        max-width: 200px;
-        margin-bottom: 2rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero-logo-wrap {
-        max-width: 160px;
-        margin-bottom: 1.6rem;
-      }
-    }
-
-    @media (min-width: 1400px) {
-      .hero-logo-wrap {
-        max-width: 300px;
-      }
-    }
-
-    /* ── Hero text ── */
-    .hero-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-      border: 1px solid var(--rule);
-      padding: 7px 16px;
-      border-radius: 100px;
-      margin-bottom: 1.8rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-tag-dot {
-      width: 6px; height: 6px;
-      background: var(--gold);
-      border-radius: 50%;
-      animation: pulse 2.2s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50%       { opacity: 0.5; transform: scale(0.7); }
-    }
-
-    .hero-h1 {
-      font-size: clamp(1.9rem, 4.5vw, 3.6rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.1;
-      color: var(--forest);
-      max-width: 820px;
-      margin-inline: auto;
-      margin-bottom: 1.2rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-h1 .accent { color: var(--gold); }
-
-    .hero-h2 {
-      font-size: clamp(1rem, 2vw, 1.22rem);
-      font-weight: 400;
-      color: var(--muted);
-      letter-spacing: 0;
-      max-width: 580px;
-      margin-inline: auto;
-      margin-bottom: 3rem;
-      line-height: 1.65;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-actions {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* ── Stat strip below hero ── */
-    .hero-stats {
-      margin-top: clamp(3rem, 6vw, 5rem);
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      background: var(--rule);
-      border-top: 1px solid var(--rule);
-      border-bottom: 1px solid var(--rule);
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-stat {
-      background: var(--canvas);
-      padding: 2.2rem 1.5rem;
-      text-align: center;
-      transition: background 0.3s;
-    }
-
-    .hero-stat:hover { background: var(--gold-pale); }
-
-    .hero-stat-value {
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      font-weight: 800;
-      letter-spacing: -0.04em;
-      color: var(--forest);
-      line-height: 1;
-      margin-bottom: 0.4rem;
-    }
-
-    .hero-stat-value .unit {
-      font-size: 55%;
-      font-weight: 500;
-      color: var(--gold);
-      vertical-align: super;
-    }
-
-    .hero-stat-label {
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    /* ═══════════════════════════════════════════════════════════════
-       ██ SECTION 1 — VISION
-    ═══════════════════════════════════════════════════════════════ */
-    #vision {
-      padding-block: var(--section-pad);
-    }
-
-    .vision-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: clamp(3rem, 6vw, 7rem);
-      align-items: center;
-    }
-
-    .vision-graphic {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* Decorative abstract field graphic using CSS */
-    .field-art {
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      background: var(--forest-lite);
-      border-radius: 4px;
-      overflow: hidden;
-      position: relative;
-      border: 1px solid var(--rule);
-    }
-
-    .field-art-row {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 6px;
-      background: var(--forest);
-      border-radius: 2px 2px 0 0;
-    }
-
-    .field-art::before,
-    .field-art::after {
-      content: '';
-      position: absolute;
-    }
-
-    .field-art::before {
-      inset: 0;
-      background:
-        repeating-linear-gradient(
-          180deg,
-          rgba(15, 58, 32, 0.07) 0px,
-          rgba(15, 58, 32, 0.07) 1px,
-          transparent 1px,
-          transparent 22px
-        );
-    }
-
-    .field-art::after {
-      inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(230, 126, 34, 0.06) 0%,
-        transparent 50%,
-        rgba(15, 58, 32, 0.08) 100%
-      );
-    }
-
-    .field-art-inner {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 2rem;
-      z-index: 2;
-    }
-
-    .field-metric {
-      background: rgba(255,255,255,0.9);
-      border-left: 4px solid var(--gold);
-      padding: 1rem 1.4rem;
-      margin-top: 0.6rem;
-      backdrop-filter: blur(4px);
-    }
-
-    .field-metric-val {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--forest);
-      letter-spacing: -0.04em;
-      line-height: 1;
-    }
-
-    .field-metric-lbl {
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-top: 2px;
-    }
-
-    .vision-text blockquote {
-      border-left: 3px solid var(--gold);
-      padding-left: 1.4rem;
-      margin-block: 2rem;
-      font-style: italic;
-      font-size: 1.1rem;
-      color: var(--forest-mid);
-      line-height: 1.65;
-    }
-
-    /* ═══════════════════════════════════════════════════════════════
-       ██ SECTION 2 — METRICS
-    ═══════════════════════════════════════════════════════════════ */
-    #metrics {
-      padding-block: var(--section-pad);
-      background: var(--canvas-2);
-      border-top: 1px solid var(--rule);
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .metrics-header {
-      text-align: center;
-      max-width: 640px;
-      margin-inline: auto;
-      margin-bottom: clamp(3rem, 5vw, 5rem);
-    }
-
-    .metrics-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5px;
-      background: var(--rule);
-      border: 1px solid var(--rule);
-    }
-
-    .metric-card {
-      background: var(--canvas);
-      padding: clamp(1.8rem, 3vw, 2.8rem);
-      display: grid;
-      grid-template-columns: 56px 1fr;
-      gap: 1.4rem;
-      align-items: flex-start;
-      transition: background 0.25s var(--ease);
-    }
-
-    .metric-card:hover { background: var(--gold-pale); }
-
-    .metric-icon {
-      width: 52px; height: 52px;
-      background: var(--forest-lite);
-      border: 1px solid rgba(15, 58, 32, 0.15);
-      border-radius: 3px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem;
-      flex-shrink: 0;
-      transition: background 0.25s;
-    }
-
-    .metric-card:hover .metric-icon {
-      background: var(--gold);
-    }
-
-    .metric-title {
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--forest);
-      margin-bottom: 0.5rem;
-    }
-
-    .metric-body {
-      font-size: 0.92rem;
-      line-height: 1.75;
-      color: var(--body-text);
-      max-width: none;
-    }
-
-    .metric-body strong {
-      color: var(--forest);
-      font-weight: 700;
-    }
-
-    /* ═══════════════════════════════════════════════════════════════
-       ██ SECTION 3 — INVESTOR VALUE
-    ═══════════════════════════════════════════════════════════════ */
-    #investor {
-      padding-block: var(--section-pad);
-    }
-
-    .investor-layout {
-      display: grid;
-      grid-template-columns: 5fr 4fr;
-      gap: clamp(3rem, 6vw, 7rem);
-      align-items: flex-start;
-    }
-
-    .investor-reasons {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    .reason-item {
-      display: grid;
-      grid-template-columns: 44px 1fr;
-      gap: 1.4rem;
-      padding: 1.8rem 0;
-      border-bottom: 1px solid var(--rule);
-      align-items: flex-start;
-      transition: transform 0.25s var(--ease);
-    }
-
-    .reason-item:first-child { padding-top: 0; }
-    .reason-item:last-child  { border-bottom: none; }
-    .reason-item:hover       { transform: translateX(4px); }
-
-    .reason-num {
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      color: var(--gold);
-      background: var(--gold-pale);
-      border: 1px solid var(--rule-gold);
-      width: 36px; height: 36px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .reason-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      color: var(--forest);
-      text-transform: uppercase;
-      margin-bottom: 0.35rem;
-    }
-
-    .reason-body {
-      font-size: 0.9rem;
-      line-height: 1.7;
-      color: var(--body-text);
-      max-width: none;
-    }
-
-    /* Investor aside */
-    .investor-aside {
-      position: sticky;
-      top: 90px;
-    }
-
-    .aside-card {
-      background: var(--forest);
-      padding: clamp(2rem, 4vw, 3rem);
-      border-radius: 4px;
-    }
-
-    .aside-card p {
-      color: rgba(255,255,255,0.75);
-      font-size: 0.92rem;
-      line-height: 1.75;
-      max-width: none;
-      margin-bottom: 1.8rem;
-    }
-
-    .aside-stat {
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-      margin-bottom: 2rem;
-    }
-
-    .aside-stat-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-bottom: 1.2rem;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .aside-stat-row:last-child { border-bottom: none; padding-bottom: 0; }
-
-    .aside-stat-label {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-    }
-
-    .aside-stat-value {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--gold);
-      letter-spacing: -0.02em;
-    }
-
-    /* ═══════════════════════════════════════════════════════════════
-       ██ SECTION 4 — CALL TO ACTION
-    ═══════════════════════════════════════════════════════════════ */
-    #cta {
-      padding-block: var(--section-pad);
-      background: var(--forest);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Horizon glow */
-    #cta::before {
-      content: '';
-      position: absolute;
-      bottom: -80px; left: 50%;
-      transform: translateX(-50%);
-      width: 900px; height: 300px;
-      background: radial-gradient(ellipse at center bottom,
-        rgba(230, 126, 34, 0.18) 0%,
-        transparent 70%);
-      pointer-events: none;
-    }
-
-    /* Rising sun decorative arc */
-    #cta::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 50%;
-      transform: translateX(-50%);
-      width: 600px; height: 300px;
-      border-radius: 300px 300px 0 0;
-      border: 1px solid rgba(230, 126, 34, 0.12);
-      pointer-events: none;
-    }
-
-    .cta-inner {
-      position: relative;
-      z-index: 1;
-      max-width: 680px;
-      margin-inline: auto;
-    }
-
-    .cta-title {
-      font-size: clamp(2rem, 4.5vw, 3.4rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      color: #ffffff;
-      margin-bottom: 1.2rem;
-      line-height: 1.1;
-    }
-
-    .cta-title .horizon { color: var(--gold); }
-
-    .cta-body {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: rgba(255,255,255,0.68);
-      max-width: 52ch;
-      margin-inline: auto;
-      margin-bottom: 3rem;
-    }
-
-    .cta-btn-wrap {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 3rem;
-    }
-
-    /* ── BUTTONS ── */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 16px 34px;
-      border-radius: 2px;
-      transition: all 0.3s var(--ease);
-      cursor: pointer;
-      border: none;
-      outline: none;
-      white-space: nowrap;
-    }
-
-    .btn-gold {
-      background: var(--gold);
-      color: #fff;
-      box-shadow: 0 4px 20px rgba(230, 126, 34, 0.3);
-    }
-
-    .btn-gold:hover {
-      background: var(--gold-deep);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 36px rgba(230, 126, 34, 0.45);
-      letter-spacing: 0.13em;
-    }
-
-    .btn-gold:active {
-      transform: translateY(-1px);
-      box-shadow: 0 4px 16px rgba(230, 126, 34, 0.3);
-    }
-
-    .btn-outline-light {
-      background: transparent;
-      color: rgba(255,255,255,0.85);
-      border: 1.5px solid rgba(255,255,255,0.25);
-    }
-
-    .btn-outline-light:hover {
-      background: rgba(255,255,255,0.07);
-      border-color: rgba(255,255,255,0.5);
-      transform: translateY(-2px);
-    }
-
-    .btn-outline-dark {
-      background: transparent;
-      color: var(--forest);
-      border: 1.5px solid rgba(15, 58, 32, 0.3);
-    }
-
-    .btn-outline-dark:hover {
-      background: var(--forest-lite);
-      border-color: var(--forest);
-      transform: translateY(-2px);
-    }
-
-    /* Arrow icon in button */
-    .btn-arrow {
-      transition: transform 0.3s var(--ease);
-    }
-    .btn:hover .btn-arrow { transform: translateX(4px); }
-
-    /* ═══════════════════════════════════════════════════════════════
-       ██ FOOTER
-    ═══════════════════════════════════════════════════════════════ */
-    #site-footer {
-      background: #060e09;
-      padding-block: clamp(3rem, 5vw, 5rem);
-    }
-
-    .footer-inner {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    /* Footer logo block */
-    .footer-brand {
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-    }
-
-    .footer-logo-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      /* Constrained logo rendering in footer */
-      max-width: 130px;
-    }
-
-    .footer-logo-wrap img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      display: block;
-      filter: brightness(1) drop-shadow(0 2px 8px rgba(230,126,34,0.2));
-    }
-
-    .footer-brand-name {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: rgba(255,255,255,0.9);
-      letter-spacing: -0.01em;
-    }
-
-    .footer-brand-name span {
-      display: block;
-      font-size: 0.6rem;
-      font-weight: 400;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.35);
-      margin-top: 2px;
-    }
-
-    /* Footer divider */
-    .footer-divider {
-      width: 1px;
-      height: 80px;
-      background: rgba(255,255,255,0.08);
-    }
-
-    /* Footer notice */
-    .footer-notice {
-      text-align: right;
-    }
-
-    .footer-notice p {
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.4);
-      line-height: 1.7;
-      max-width: 42ch;
-      margin-left: auto;
-    }
-
-    .footer-notice a {
-      color: var(--gold);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .footer-notice a:hover {
-      color: #f0a54a;
-    }
-
-    .footer-bottom {
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(255,255,255,0.05);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .footer-copy {
-      font-size: 0.72rem;
-      color: rgba(255,255,255,0.22);
-      letter-spacing: 0.06em;
-    }
-
-    .footer-legal {
-      display: flex;
-      gap: 1.8rem;
-      list-style: none;
-    }
-
-    .footer-legal a {
-      font-size: 0.7rem;
-      color: rgba(255,255,255,0.22);
-      text-decoration: none;
-      letter-spacing: 0.08em;
-      transition: color 0.2s;
-    }
-
-    .footer-legal a:hover { color: rgba(255,255,255,0.55); }
-
-    /* ═══════════════════════════════════════════════════════════════
-       SCROLL REVEAL ANIMATIONS
-    ═══════════════════════════════════════════════════════════════ */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
-    }
-
-    .reveal.in-view {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-    .reveal-delay-4 { transition-delay: 0.4s; }
-
-    /* ═══════════════════════════════════════════════════════════════
-       RESPONSIVE BREAKPOINTS
-    ═══════════════════════════════════════════════════════════════ */
-    @media (max-width: 960px) {
-      .vision-grid       { grid-template-columns: 1fr; }
-      .investor-layout   { grid-template-columns: 1fr; }
-      .investor-aside    { position: static; }
-      .hero-stats        { grid-template-columns: repeat(2, 1fr); }
-      .footer-inner      { grid-template-columns: 1fr; text-align: center; }
-      .footer-divider    { display: none; }
-      .footer-notice     { text-align: center; }
-      .footer-notice p   { margin-inline: auto; }
-      .footer-logo-wrap  { margin-inline: auto; }
-    }
-
-    @media (max-width: 700px) {
-      .metrics-grid { grid-template-columns: 1fr; }
-      .nav-links    { display: none; }
-      .hero-stats   { grid-template-columns: repeat(2, 1fr); }
-      .footer-bottom { flex-direction: column; text-align: center; }
-    }
-
-    @media (max-width: 480px) {
-      .hero-stats { grid-template-columns: 1fr 1fr; }
-      .metric-card { grid-template-columns: 1fr; }
-      .reason-item { grid-template-columns: 1fr; }
-    }
+  /* ═══════════════════════════════════════════════════════════
+     TOKENS & RESET
+  ═══════════════════════════════════════════════════════════ */
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --black:   #060e09;
+    --forest:  #0d3319;
+    --green:   #1a3a2a;
+    --green2:  #2d5a3e;
+    --green3:  #4a7a5a;
+    --gold:    #c8850a;
+    --gold2:   #e09a20;
+    --gold-lt: #f0c060;
+    --cream:   #f7f4ed;
+    --cream2:  #eef2ee;
+    --white:   #ffffff;
+    --gray:    #7a8a80;
+    --rule:    rgba(13,51,25,0.12);
+    --rule-g:  rgba(200,133,10,0.28);
+    --serif:   'Georgia','Times New Roman',serif;
+    --sans:    'Inter','Helvetica Neue',Arial,system-ui,sans-serif;
+    --ease:    cubic-bezier(0.22,1,0.36,1);
+    --pad:     clamp(80px,10vw,130px);
+    --wrap:    1140px;
+    --gut:     clamp(20px,5vw,60px);
+  }
+  html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+  body{font-family:var(--sans);background:var(--cream);color:#2a2a2a;overflow-x:hidden;line-height:1.7}
+  ::selection{background:var(--gold);color:#fff}
+  img{display:block;max-width:100%}
+  a{text-decoration:none}
+  ul{list-style:none}
+
+  /* ── Layout ── */
+  .wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut)}
+  .sec{padding-block:var(--pad)}
+  .sec--dark{background:var(--forest)}
+  .sec--alt{background:var(--cream2)}
+  .sec--black{background:var(--black)}
+
+  /* ── Shared typography ── */
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--gold);margin-bottom:1rem
+  }
+  .eyebrow::before{content:'';display:block;width:22px;height:2px;background:var(--gold);flex-shrink:0}
+  .sec-title{
+    font-family:var(--serif);font-size:clamp(1.7rem,3.2vw,2.7rem);
+    font-weight:700;color:var(--forest);line-height:1.12;margin-bottom:1.1rem;letter-spacing:-.02em
+  }
+  .sec-title.light{color:#fff}
+  .sec-body{font-size:.98rem;line-height:1.85;color:#3a3a3a;max-width:64ch}
+  .sec-body.light{color:rgba(255,255,255,.72);max-width:54ch}
+  .gold-bar{width:48px;height:3px;background:linear-gradient(to right,var(--gold),var(--gold2));border-radius:2px;margin-bottom:1.6rem}
+  .gold-bar.center{margin-inline:auto}
+  .hdivide{width:100%;height:1px;background:linear-gradient(to right,transparent,var(--rule-g),transparent)}
+
+  /* ── Reveal ── */
+  .rv{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .rv.on{opacity:1;transform:none}
+  .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+  /* ── Buttons ── */
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    padding:15px 30px;border-radius:2px;border:none;cursor:pointer;transition:all .3s var(--ease)
+  }
+  .btn-arr{transition:transform .3s var(--ease)}
+  .btn:hover .btn-arr{transform:translateX(5px)}
+  .btn-gold{background:var(--gold);color:#fff;box-shadow:0 4px 20px rgba(200,133,10,.3)}
+  .btn-gold:hover{background:var(--gold2);transform:translateY(-3px);box-shadow:0 10px 36px rgba(200,133,10,.42);letter-spacing:.13em}
+  .btn-ghost{background:transparent;color:rgba(255,255,255,.85);border:1.5px solid rgba(255,255,255,.25)}
+  .btn-ghost:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.5);transform:translateY(-2px)}
+  .btn-outline{background:transparent;color:var(--forest);border:1.5px solid rgba(13,51,25,.28)}
+  .btn-outline:hover{background:var(--cream2);border-color:var(--forest);transform:translateY(-2px)}
+
+  /* ══════════════════════════════════════════════════════════
+     NAV
+  ══════════════════════════════════════════════════════════ */
+  #nav{
+    position:fixed;top:0;left:0;right:0;z-index:300;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0 var(--gut);height:70px;
+    background:transparent;transition:background .4s,backdrop-filter .4s,box-shadow .4s
+  }
+  #nav.scrolled{
+    background:rgba(6,14,9,.93);backdrop-filter:blur(18px);
+    box-shadow:0 4px 32px rgba(0,0,0,.22)
+  }
+  .nav-brand{display:flex;align-items:center;gap:12px}
+  /* Logo in nav — constrained circular */
+  .nav-logo-ring{
+    width:44px;height:44px;border-radius:50%;overflow:hidden;
+    border:2px solid rgba(200,133,10,.5);background:#fff;
+    display:flex;align-items:center;justify-content:center;flex-shrink:0
+  }
+  .nav-logo-ring img{width:100%;height:100%;object-fit:contain;object-position:center}
+  .nav-brand-text{font-family:var(--serif);font-size:1rem;font-weight:700;color:#fff;letter-spacing:.01em;line-height:1.2}
+  .nav-brand-text span{display:block;font-family:var(--sans);font-size:.58rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:1px}
+  .nav-links{display:flex;gap:2.2rem}
+  .nav-links a{
+    font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+    color:rgba(255,255,255,.72);transition:color .2s;padding-bottom:2px;border-bottom:2px solid transparent;transition:color .2s,border-color .2s
+  }
+  .nav-links a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+  .nav-cta{
+    font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--forest);background:var(--gold);padding:10px 22px;border-radius:2px;
+    transition:background .2s,transform .2s
+  }
+  .nav-cta:hover{background:var(--gold2);transform:translateY(-1px)}
+  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+  .hamburger span{width:24px;height:2px;background:#fff;transition:all .3s;display:block}
+
+  /* ══════════════════════════════════════════════════════════
+     HERO
+  ══════════════════════════════════════════════════════════ */
+  #hero{
+    position:relative;min-height:100vh;display:flex;align-items:flex-end;
+    overflow:hidden;background:var(--black)
+  }
+  .hero-bg{
+    position:absolute;inset:0;
+    background:
+      linear-gradient(160deg,rgba(6,14,9,.08) 0%,rgba(6,14,9,.55) 55%,rgba(6,14,9,.92) 100%),
+      url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1800&q=85&auto=format&fit=crop') center/cover no-repeat;
+    transform:scale(1.06);transition:transform 8s ease-out
+  }
+  #hero.loaded .hero-bg{transform:scale(1)}
+  .hero-accent-bar{position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--gold)}
+  .hero-content{
+    position:relative;z-index:2;width:100%;padding:0 var(--gut) 8vh;
+    display:grid;grid-template-columns:1fr 1fr;align-items:flex-end;gap:4rem
+  }
+  .hero-eyebrow{font-size:.67rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.1rem}
+  .hero-h1{
+    font-family:var(--serif);font-size:clamp(2.6rem,5.5vw,4.8rem);font-weight:700;
+    color:#fff;line-height:1.06;margin-bottom:1.4rem;letter-spacing:-.02em
+  }
+  .hero-h1 em{font-style:italic;color:var(--gold-lt)}
+  .hero-desc{font-size:.96rem;font-weight:300;line-height:1.82;color:rgba(255,255,255,.75);max-width:420px;margin-bottom:2.4rem}
+  .hero-actions{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+
+  /* Hero right — stats */
+  .hero-right{display:flex;flex-direction:column;align-items:flex-end;gap:2rem}
+  .stat-panel{
+    display:grid;grid-template-columns:1fr 1fr;gap:1px;
+    background:rgba(200,133,10,.2);border:1px solid rgba(200,133,10,.2)
+  }
+  .stat-cell{
+    background:rgba(6,14,9,.65);backdrop-filter:blur(10px);
+    padding:1.4rem 1.6rem;text-align:center
+  }
+  .stat-val{
+    font-family:var(--serif);font-size:2rem;font-weight:700;
+    color:var(--gold-lt);line-height:1;margin-bottom:.35rem
+  }
+  .stat-val span{font-size:55%;color:var(--gold);vertical-align:super}
+  .stat-lbl{font-size:.62rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+  .hero-scroll-hint{display:flex;flex-direction:column;align-items:center;gap:6px;color:rgba(255,255,255,.35);font-size:.6rem;letter-spacing:.15em;text-transform:uppercase}
+  .scroll-line{width:1px;height:48px;background:linear-gradient(to bottom,rgba(200,133,10,.8),transparent);animation:pulse 2.2s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
+
+  /* ══════════════════════════════════════════════════════════
+     OWNER SPOTLIGHT  (shifo.png — the founder photo)
+  ══════════════════════════════════════════════════════════ */
+  #owner{padding-block:var(--pad);background:var(--forest)}
+  .owner-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,7rem);align-items:center}
+
+  /* shifo.png — responsive, constrained, never distorted */
+  .owner-photo-wrap{
+    display:flex;align-items:center;justify-content:center;
+    width:100%;max-width:520px;
+    position:relative
+  }
+  .owner-photo-frame{
+    width:100%;max-width:500px;
+    border-radius:6px;overflow:hidden;
+    border:1px solid rgba(200,133,10,.3);
+    box-shadow:0 24px 60px rgba(0,0,0,.45),0 4px 12px rgba(0,0,0,.25);
+    position:relative
+  }
+  .owner-photo-frame img{
+    width:100%;height:auto;object-fit:cover;object-position:center top;
+    display:block;transition:transform .6s var(--ease)
+  }
+  .owner-photo-frame:hover img{transform:scale(1.03)}
+  /* Gold corner accent */
+  .owner-photo-frame::before{
+    content:'';position:absolute;top:0;left:0;right:0;height:4px;
+    background:linear-gradient(to right,var(--gold),var(--gold2));z-index:2
+  }
+  .photo-caption{
+    margin-top:.9rem;font-size:.72rem;font-style:italic;
+    color:rgba(255,255,255,.4);text-align:center;letter-spacing:.04em
+  }
+
+  .owner-text{}
+  .owner-text blockquote{
+    border-left:3px solid var(--gold);padding-left:1.4rem;margin-block:1.8rem;
+    font-family:var(--serif);font-style:italic;font-size:1.1rem;
+    color:rgba(255,255,255,.8);line-height:1.65
+  }
+  .founder-badge{
+    display:inline-flex;align-items:center;gap:12px;
+    background:rgba(200,133,10,.1);border:1px solid rgba(200,133,10,.25);
+    padding:.9rem 1.4rem;border-radius:3px;margin-top:2rem
+  }
+  .founder-badge-logo{
+    width:48px;height:48px;border-radius:50%;overflow:hidden;border:2px solid var(--gold);flex-shrink:0
+  }
+  .founder-badge-logo img{width:100%;height:100%;object-fit:contain}
+  .founder-badge-info strong{display:block;font-size:.85rem;font-weight:700;color:#fff}
+  .founder-badge-info span{font-size:.65rem;color:rgba(255,255,255,.45);letter-spacing:.1em;text-transform:uppercase}
+
+  /* ══════════════════════════════════════════════════════════
+     ABOUT / KEY METRICS STRIP
+  ══════════════════════════════════════════════════════════ */
+  #about{padding-block:var(--pad)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,7rem);align-items:center}
+  .about-img-wrap{position:relative}
+  .about-img-frame{
+    width:100%;aspect-ratio:4/5;overflow:hidden;
+    border:1px solid var(--rule);position:relative;background:var(--cream2)
+  }
+  .about-img-frame img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .5s var(--ease)}
+  .about-img-frame:hover img{transform:scale(1.04)}
+  .about-badge{
+    position:absolute;bottom:-1.2rem;right:-1.2rem;
+    width:110px;height:110px;background:var(--gold);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:.8rem
+  }
+  .about-badge strong{font-family:var(--serif);font-size:1.9rem;font-weight:700;color:var(--forest);line-height:1}
+  .about-badge span{font-size:.58rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--forest);opacity:.8;margin-top:4px}
+  .about-features{margin-top:2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+  .feat{padding-top:.9rem;border-top:1px solid var(--rule)}
+  .feat-title{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--forest);margin-bottom:.35rem}
+  .feat-body{font-size:.84rem;line-height:1.65;color:#5a6e62}
+
+  /* ══════════════════════════════════════════════════════════
+     GREENHOUSE SHOWCASE (13 greenhouses highlight)
+  ══════════════════════════════════════════════════════════ */
+  #greenhouses{padding-block:var(--pad);background:var(--cream2)}
+  .gh-header{text-align:center;max-width:660px;margin-inline:auto;margin-bottom:clamp(3rem,5vw,5rem)}
+  .gh-hero-stat{
+    display:inline-flex;align-items:center;gap:1.2rem;
+    background:var(--forest);color:#fff;padding:1.2rem 2rem;margin-bottom:2rem;
+    border-left:4px solid var(--gold)
+  }
+  .gh-big{font-family:var(--serif);font-size:3rem;font-weight:700;color:var(--gold-lt);line-height:1}
+  .gh-lbl{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+  .gh-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5px;background:var(--rule)}
+  .gh-card{
+    background:#fff;padding:1.8rem 1.6rem;
+    border-bottom:3px solid transparent;transition:border-color .3s,background .3s
+  }
+  .gh-card:hover{border-bottom-color:var(--gold);background:var(--cream)}
+  .gh-icon{font-size:1.8rem;margin-bottom:.9rem}
+  .gh-card-title{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--forest);margin-bottom:.4rem}
+  .gh-card-body{font-size:.84rem;line-height:1.65;color:#5a6e62}
+  .gh-strip{
+    margin-top:2.5rem;display:grid;grid-template-columns:repeat(4,1fr);
+    gap:1.5px;background:var(--forest);border:1px solid var(--forest)
+  }
+  .gh-strip-cell{background:var(--forest);padding:1.4rem 1.2rem;text-align:center}
+  .gh-strip-val{font-family:var(--serif);font-size:1.8rem;font-weight:700;color:var(--gold-lt);line-height:1;margin-bottom:.3rem}
+  .gh-strip-lbl{font-size:.62rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+
+  /* ══════════════════════════════════════════════════════════
+     CROP TIERS
+  ══════════════════════════════════════════════════════════ */
+  #crops{padding-block:var(--pad)}
+  .crops-head{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-bottom:3.5rem;align-items:flex-end}
+  .tier-block{margin-bottom:1.5px;border:1px solid var(--rule);background:#fff}
+  .tier-head{
+    display:grid;grid-template-columns:80px 1fr auto;align-items:center;gap:1.4rem;
+    padding:1.4rem 1.8rem;border-bottom:1px solid var(--rule);cursor:default
+  }
+  .tier-num{font-family:var(--serif);font-size:2.2rem;font-weight:700;color:var(--gold);line-height:1}
+  .tier-name{font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--forest);margin-bottom:.2rem}
+  .tier-win{font-size:.7rem;font-weight:500;letter-spacing:.06em;color:var(--gray)}
+  .tier-tag{
+    font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--green2);background:rgba(45,90,62,.08);padding:7px 13px;white-space:nowrap
+  }
+  .tier-crops{display:grid;grid-template-columns:repeat(5,1fr)}
+  .tcrop{padding:1.4rem 1.2rem;border-right:1px solid var(--rule);transition:background .3s}
+  .tcrop:last-child{border-right:none}
+  .tcrop:hover{background:var(--forest)}
+  .tcrop:hover .tcrop-name,.tcrop:hover .tcrop-det{color:#fff}
+  .tcrop-name{font-family:var(--serif);font-size:1.05rem;font-weight:600;color:var(--forest);margin-bottom:.3rem;transition:color .3s}
+  .tcrop-det{font-size:.72rem;font-weight:300;line-height:1.5;color:var(--gray);transition:color .3s}
+  .strat-pair{margin-top:2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:1.5px;background:var(--rule)}
+  .strat{background:var(--cream2);padding:2rem 2.2rem}
+  .strat-lbl{font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.55rem}
+  .strat-title{font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--forest);margin-bottom:.55rem}
+  .strat-body{font-size:.84rem;line-height:1.7;color:#5a6e62}
+
+  /* ══════════════════════════════════════════════════════════
+     INVESTMENT TRACKS
+  ══════════════════════════════════════════════════════════ */
+  #invest{padding-block:var(--pad)}
+  .invest-head{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-bottom:4rem;align-items:flex-end}
+  .tracks{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:rgba(200,133,10,.18)}
+  .track{
+    background:var(--black);padding:2.8rem 2rem;position:relative;overflow:hidden;
+    transition:transform .3s
+  }
+  .track::before{
+    content:'';position:absolute;top:0;left:0;right:0;height:3px;
+    background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)
+  }
+  .track:hover::before{transform:scaleX(1)}
+  .track:hover{transform:translateY(-4px)}
+  .track-num{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem;display:block}
+  .track-title{font-family:var(--serif);font-size:1.55rem;font-weight:600;color:#fff;line-height:1.25;margin-bottom:.45rem}
+  .track-sub{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);margin-bottom:1.6rem;padding-bottom:1.6rem;border-bottom:1px solid rgba(255,255,255,.07)}
+  .track-items{display:flex;flex-direction:column;gap:1rem}
+  .track-item{display:flex;gap:.8rem;align-items:flex-start}
+  .track-dot{width:4px;height:4px;background:var(--gold);border-radius:50%;margin-top:.6rem;flex-shrink:0}
+  .track-text{font-size:.83rem;font-weight:300;line-height:1.7;color:rgba(255,255,255,.58)}
+  .track-text strong{color:rgba(255,255,255,.9);font-weight:500}
+
+  /* ══════════════════════════════════════════════════════════
+     TREE CERTIFICATES
+  ══════════════════════════════════════════════════════════ */
+  #certificates{padding-block:var(--pad);background:var(--cream2)}
+  .cert-head{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-bottom:4rem;align-items:flex-end}
+  .certs{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+  .cert{
+    background:#fff;border:1px solid var(--rule);padding:2.8rem 2.5rem 2.2rem;
+    position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s
+  }
+  .cert:hover{box-shadow:0 24px 60px rgba(13,51,25,.1);transform:translateY(-5px)}
+  /* lined paper texture */
+  .cert::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 27px,rgba(13,51,25,.032) 27px,rgba(13,51,25,.032) 28px)}
+  .cert::after{content:'';position:absolute;top:0;left:0;width:5px;height:100%;background:var(--gold)}
+  .cert-stamp{position:absolute;top:1.8rem;right:1.8rem;width:52px;height:52px;border:2px solid rgba(200,133,10,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;opacity:.6}
+  .cert-eye{font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gray);margin-bottom:.5rem;position:relative}
+  .cert-price{font-family:var(--serif);font-size:1.9rem;font-weight:700;color:var(--forest);margin-bottom:.25rem;position:relative}
+  .cert-variety{font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--green2);margin-bottom:1.8rem;position:relative}
+  .cert-divider{height:1px;background:linear-gradient(to right,var(--gold),transparent);margin-bottom:1.6rem;position:relative}
+  .cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.8rem;position:relative}
+  .cert-item-lbl{font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);margin-bottom:.25rem}
+  .cert-item-val{font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--forest)}
+  .cert-item-val.gold{color:var(--gold)}
+  .cert-cta{
+    display:block;text-align:center;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--forest);background:var(--gold);padding:13px;transition:background .2s;position:relative
+  }
+  .cert-cta:hover{background:var(--gold2)}
+
+  /* ══════════════════════════════════════════════════════════
+     INFRASTRUCTURE / IRRIGATION
+  ══════════════════════════════════════════════════════════ */
+  #infrastructure{padding-block:var(--pad)}
+  .infra-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+  .infra-list{display:flex;flex-direction:column}
+  .infra-item{display:grid;grid-template-columns:52px 1fr;gap:1.3rem;padding:1.6rem 0;border-bottom:1px solid var(--rule);align-items:flex-start}
+  .infra-item:first-child{padding-top:0}
+  .infra-icon{width:46px;height:46px;background:rgba(13,51,25,.06);border:1px solid rgba(13,51,25,.1);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;transition:background .3s}
+  .infra-item:hover .infra-icon{background:var(--gold)}
+  .infra-item-title{font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--forest);margin-bottom:.35rem}
+  .infra-item-body{font-size:.84rem;line-height:1.7;color:#5a6e62}
+  .infra-nums{display:grid;grid-template-columns:1fr 1fr;gap:1.5px;background:var(--rule)}
+  .infra-num-cell{background:var(--cream2);padding:2.2rem 1.8rem}
+  .infra-num-cell:first-child{grid-column:span 2;background:var(--forest)}
+  .infra-big{font-family:var(--serif);font-size:3rem;font-weight:700;color:var(--gold-lt);line-height:1;margin-bottom:.35rem}
+  .infra-lbl{font-size:.65rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+  .infra-lbl.light{color:rgba(255,255,255,.5)}
+  .infra-lbl.dark{color:var(--gray)}
+  .infra-sub{font-family:var(--serif);font-size:1.8rem;font-weight:700;color:var(--forest);line-height:1;margin-bottom:.3rem}
+
+  /* ══════════════════════════════════════════════════════════
+     WORKFORCE
+  ══════════════════════════════════════════════════════════ */
+  #workforce{padding-block:var(--pad);background:var(--cream2)}
+  .wf-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:flex-start}
+  .squad-cards{display:flex;flex-direction:column;gap:1.5px;background:var(--rule)}
+  .squad{
+    background:#fff;display:grid;grid-template-columns:60px 1fr;gap:1.1rem;
+    padding:1.5rem;border-left:3px solid transparent;transition:border-color .3s,background .3s;align-items:flex-start
+  }
+  .squad:hover{border-left-color:var(--gold);background:var(--cream)}
+  .squad-cnt{font-family:var(--serif);font-size:1.9rem;font-weight:700;color:var(--gold);line-height:1}
+  .squad-cnt span{display:block;font-family:var(--sans);font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);margin-top:3px}
+  .squad-name{font-size:.76rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--forest);margin-bottom:.35rem}
+  .squad-duty{font-size:.82rem;line-height:1.65;color:#5a6e62}
+  .cert-path{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5px;background:var(--rule);margin-top:2rem}
+  .cert-level{background:var(--cream2);padding:1.3rem;text-align:center}
+  .cert-level-num{font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--gold);margin-bottom:.35rem}
+  .cert-level-title{font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--forest)}
+  .sop-list{display:flex;flex-direction:column}
+  .sop-row{display:grid;grid-template-columns:90px 1fr;gap:.9rem;padding:1.1rem 0;border-bottom:1px solid var(--rule);align-items:flex-start}
+  .sop-row:last-child{border-bottom:none}
+  .sop-time{font-size:.7rem;font-weight:700;letter-spacing:.06em;color:var(--gold);padding-top:2px}
+  .sop-act{font-size:.84rem;line-height:1.6;color:var(--forest);font-weight:500}
+  .sop-act em{font-style:normal;color:var(--gray);font-weight:300;font-size:.78rem}
+  .training-box{margin-top:2rem;padding:1.7rem 2rem;background:#fff;border-left:3px solid var(--gold)}
+  .training-box-lbl{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem}
+  .training-box p{font-family:var(--serif);font-size:1rem;color:var(--forest);line-height:1.5;max-width:none}
+  .training-box .training-note{font-family:var(--sans);font-size:.82rem;color:#5a6e62;margin-top:.5rem;line-height:1.6}
+
+  /* ══════════════════════════════════════════════════════════
+     ECOSYSTEM
+  ══════════════════════════════════════════════════════════ */
+  #ecosystem{padding-block:var(--pad)}
+  .eco-head{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-bottom:3.5rem;align-items:flex-end}
+  .eco-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5px;background:var(--rule)}
+  .eco-card{background:#fff;padding:2.2rem 1.8rem;transition:background .3s}
+  .eco-card:hover{background:var(--forest)}
+  .eco-card:hover .eco-title,.eco-card:hover .eco-body{color:#fff}
+  .eco-card:hover .eco-icon-wrap{background:rgba(200,133,10,.2)}
+  .eco-icon-wrap{width:50px;height:50px;background:rgba(13,51,25,.06);display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin-bottom:1.3rem;transition:background .3s}
+  .eco-title{font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--forest);margin-bottom:.55rem;transition:color .3s}
+  .eco-body{font-size:.83rem;line-height:1.7;color:#5a6e62;transition:color .3s}
+
+  /* ══════════════════════════════════════════════════════════
+     BUDGET TABLE
+  ══════════════════════════════════════════════════════════ */
+  #budget{padding-block:var(--pad);background:var(--cream2)}
+  .budget-head{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-bottom:3rem;align-items:flex-end}
+  table.btable{width:100%;border-collapse:collapse;font-size:.86rem}
+  .btable thead tr{background:var(--forest);color:#fff}
+  .btable th{padding:13px 16px;font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-align:left}
+  .btable td{padding:12px 16px;color:var(--forest);border-bottom:1px solid var(--rule);vertical-align:middle}
+  .btable tr:nth-child(even) td{background:rgba(13,51,25,.03)}
+  .btable td.amt{font-family:var(--serif);font-size:.95rem;font-weight:600;color:var(--green2);white-space:nowrap}
+  .btable tfoot td{background:var(--forest);color:#fff;font-weight:700;border:none;padding:15px 16px;font-size:.9rem}
+  .btable tfoot td.amt{font-family:var(--serif);font-size:1.25rem;font-weight:700;color:var(--gold-lt)}
+
+  /* ══════════════════════════════════════════════════════════
+     ROADMAP
+  ══════════════════════════════════════════════════════════ */
+  #roadmap{padding-block:var(--pad)}
+  .rm-head{margin-bottom:4.5rem}
+  .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+  .timeline::before{content:'';position:absolute;top:26px;left:0;right:0;height:1px;background:linear-gradient(to right,var(--gold),rgba(200,133,10,.1))}
+  .tl-item{padding:0 1.4rem 0 0}
+  .tl-marker{width:14px;height:14px;background:var(--gold);border:3px solid var(--forest);outline:1px solid var(--gold);border-radius:50%;margin-bottom:1.9rem;position:relative;z-index:1}
+  .tl-year{font-size:.63rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.7rem}
+  .tl-title{font-family:var(--serif);font-size:1.15rem;font-weight:600;color:#fff;margin-bottom:.7rem;line-height:1.3}
+  .tl-body{font-size:.8rem;font-weight:300;line-height:1.75;color:rgba(255,255,255,.5)}
+
+  /* ══════════════════════════════════════════════════════════
+     CONTACT
+  ══════════════════════════════════════════════════════════ */
+  #contact{padding-block:var(--pad);text-align:center;position:relative;overflow:hidden}
+  #contact::before{content:'';position:absolute;bottom:-80px;left:50%;transform:translateX(-50%);width:900px;height:300px;background:radial-gradient(ellipse at center bottom,rgba(200,133,10,.17) 0%,transparent 70%);pointer-events:none}
+  #contact::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:600px;height:300px;border-radius:300px 300px 0 0;border:1px solid rgba(200,133,10,.1);pointer-events:none}
+  .contact-inner{position:relative;z-index:1;max-width:680px;margin-inline:auto}
+  .contact-title{font-family:var(--serif);font-size:clamp(2rem,4.5vw,3.4rem);font-weight:700;color:#fff;margin-bottom:1.1rem;line-height:1.1;letter-spacing:-.02em}
+  .contact-title em{font-style:italic;color:var(--gold-lt)}
+  .contact-body{font-size:1rem;line-height:1.8;color:rgba(255,255,255,.62);max-width:50ch;margin-inline:auto;margin-bottom:2.8rem}
+  .contact-form{display:flex;flex-direction:column;gap:1rem;max-width:480px;margin-inline:auto}
+  .contact-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea{
+    width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+    color:#fff;font-family:var(--sans);font-size:.86rem;font-weight:300;padding:13px 15px;
+    outline:none;transition:border-color .2s;appearance:none;border-radius:0
+  }
+  .contact-form input::placeholder,.contact-form textarea::placeholder{color:rgba(255,255,255,.3)}
+  .contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{border-color:var(--gold)}
+  .contact-form select option{background:var(--black);color:#fff}
+  .contact-form textarea{resize:vertical;min-height:100px}
+  .contact-submit{
+    width:100%;font-size:.74rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+    color:var(--forest);background:var(--gold);border:none;padding:15px;cursor:pointer;
+    transition:background .2s
+  }
+  .contact-submit:hover{background:var(--gold2)}
+  .contact-disclaimer{font-size:.68rem;color:rgba(255,255,255,.28);line-height:1.6;margin-top:.5rem}
+
+  /* ══════════════════════════════════════════════════════════
+     FOOTER
+  ══════════════════════════════════════════════════════════ */
+  footer{
+    background:var(--black);border-top:1px solid rgba(200,133,10,.15);
+    padding:3rem var(--gut);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.2rem
+  }
+  .footer-brand{display:flex;align-items:center;gap:12px}
+  .footer-logo-wrap{width:46px;height:46px;border-radius:50%;overflow:hidden;border:2px solid var(--gold);flex-shrink:0}
+  .footer-logo-wrap img{width:100%;height:100%;object-fit:contain}
+  .footer-name{font-family:var(--serif);font-size:1.05rem;font-weight:700;color:#fff}
+  .footer-name span{color:var(--gold)}
+  .footer-note{font-size:.7rem;color:rgba(255,255,255,.25);max-width:480px;line-height:1.6;text-align:center}
+  .footer-copy{font-size:.68rem;color:rgba(255,255,255,.25)}
+
+  /* ══════════════════════════════════════════════════════════
+     RESPONSIVE
+  ══════════════════════════════════════════════════════════ */
+  @media(max-width:960px){
+    .hero-content,.owner-grid,.about-grid,.invest-head,.infra-grid,.wf-grid,.eco-head,.budget-head,.crops-head,.cert-head,.tracks{grid-template-columns:1fr;gap:3rem}
+    .tracks{grid-template-columns:1fr}
+    .stat-panel{grid-template-columns:1fr 1fr}
+    .hero-right{align-items:flex-start}
+    .gh-grid{grid-template-columns:1fr 1fr}
+    .gh-strip{grid-template-columns:1fr 1fr}
+    .eco-grid{grid-template-columns:1fr 1fr}
+    .timeline{grid-template-columns:1fr 1fr;gap:2.5rem}
+    .timeline::before{display:none}
+    .strat-pair,.certs{grid-template-columns:1fr}
+    .owner-photo-wrap{max-width:100%}
+  }
+  @media(max-width:700px){
+    .nav-links,.nav-cta{display:none}
+    .hamburger{display:flex}
+    .about-features,.cert-path{grid-template-columns:1fr 1fr}
+    .tier-head{grid-template-columns:50px 1fr}
+    .tier-tag{display:none}
+    .tier-crops{grid-template-columns:1fr 1fr!important}
+    .gh-grid,.eco-grid,.gh-strip{grid-template-columns:1fr 1fr}
+    .timeline{grid-template-columns:1fr}
+    .contact-row{grid-template-columns:1fr}
+    .infra-nums{grid-template-columns:1fr}
+    .infra-num-cell:first-child{grid-column:span 1}
+    footer{flex-direction:column;text-align:center}
+    .footer-note{text-align:center}
+  }
+  @media(max-width:480px){
+    .stat-panel{grid-template-columns:1fr 1fr}
+    .gh-strip{grid-template-columns:1fr 1fr}
+    .about-badge{right:0;bottom:-.8rem}
+  }
   </style>
 </head>
-
 <body>
 
-  <!-- ════════════════════════════════════════════════════════════════
-       NAVIGATION
-  ═════════════════════════════════════════════════════════════════ -->
-  <nav id="site-nav" role="navigation" aria-label="Main Navigation">
-    <div class="container">
-      <div class="nav-inner">
-
-        <a class="nav-brand" href="#hero" aria-label="Shifo GreenHorizon Home">
-          <div class="nav-brand-logo-wrap">
-            <img src="1000054505.png"
-                 alt="Shifo GreenHorizon Emblem"
-                 width="40" height="40"
-                 loading="eager"
-                 decoding="async" />
-          </div>
-          <div class="nav-brand-name">
-            Shifo GreenHorizon
-            <span>Borama · Somaliland</span>
-          </div>
-        </a>
-
-        <ul class="nav-links" role="list">
-          <li><a href="#vision">Vision</a></li>
-          <li><a href="#metrics">Project</a></li>
-          <li><a href="#investor">Investors</a></li>
-          <li><a href="#cta">Contact</a></li>
-        </ul>
-
-        <a class="nav-cta-btn" href="#cta">Invest Now</a>
-
-      </div>
+<!-- ══════════════════════════════════════════════════════════
+     NAV
+══════════════════════════════════════════════════════════ -->
+<nav id="nav">
+  <a class="nav-brand" href="#hero">
+    <div class="nav-logo-ring">
+      <img src="logo.png" alt="Shifo GreenHorizon Logo" width="44" height="44" loading="eager"/>
     </div>
-  </nav>
+    <div class="nav-brand-text">
+      Shifo GreenHorizon
+      <span>Borama · Somaliland</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">Overview</a></li>
+    <li><a href="#greenhouses">Greenhouses</a></li>
+    <li><a href="#crops">Crop Plan</a></li>
+    <li><a href="#invest">Investment</a></li>
+    <li><a href="#workforce">Team</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+  </ul>
+  <a class="nav-cta" href="#contact">Express Interest</a>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
 
-  <!-- ════════════════════════════════════════════════════════════════
-       HERO
-  ═════════════════════════════════════════════════════════════════ -->
-  <header id="hero" role="banner">
-    <div class="container">
-
-      <!-- ── LOGO: robust rendering solution ── -->
-      <div class="hero-logo-wrap" role="img" aria-label="Shifo GreenHorizon Logo">
-        <img
-          src="1000054505.png"
-          alt="Shifo GreenHorizon — Circular Agricultural Emblem"
-          width="280"
-          height="280"
-          loading="eager"
-          decoding="async"
-          fetchpriority="high"
-        />
-      </div>
-
-      <div class="hero-tag">
-        <span class="hero-tag-dot"></span>
-        Shifo GreenHorizon · Agribusiness Venture · Somaliland
-      </div>
-
-      <h1 class="hero-h1">
-        Cultivating a <span class="accent">Sustainable,</span><br />
-        High-Growth Agricultural Future.
-      </h1>
-
-      <h2 class="hero-h2">
-        A Premier 110-Hectare Agribusiness Development Initiative in Somaliland.
-      </h2>
-
+<!-- ══════════════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-accent-bar"></div>
+  <div class="hero-content">
+    <div>
+      <p class="hero-eyebrow">Borama Region, Somaliland — Phase 2 Expansion Underway</p>
+      <h1 class="hero-h1">110 Hectares.<br><em>Aggressive</em><br>Agricultural Growth.</h1>
+      <p class="hero-desc">A producing 10-Ha papaya orchard and 13 operating greenhouses now fund the buildout of 100 free hectares — ultra-fast vegetables, 1-year tropicals, and 82,100 permanent orchard trees, all on a free water source.</p>
       <div class="hero-actions">
-        <a class="btn btn-gold" href="#cta">
-          Inquire About Investment
-          <span class="btn-arrow">→</span>
-        </a>
-        <a class="btn btn-outline-dark" href="#vision">
-          Explore the Vision
-        </a>
-      </div>
-
-      <!-- Stat strip -->
-      <div class="hero-stats">
-        <div class="hero-stat reveal">
-          <div class="hero-stat-value">110<span class="unit">Ha</span></div>
-          <div class="hero-stat-label">Total Land Footprint</div>
-        </div>
-        <div class="hero-stat reveal reveal-delay-1">
-          <div class="hero-stat-value">50–70</div>
-          <div class="hero-stat-label">Planned Greenhouses</div>
-        </div>
-        <div class="hero-stat reveal reveal-delay-2">
-          <div class="hero-stat-value">10<span class="unit">Ha</span></div>
-          <div class="hero-stat-label">Active Papaya Orchard</div>
-        </div>
-        <div class="hero-stat reveal reveal-delay-3">
-          <div class="hero-stat-value">4<span class="unit">×</span></div>
-          <div class="hero-stat-label">Harvest Seasons / Year</div>
-        </div>
-      </div>
-
-    </div>
-  </header>
-
-  <div class="horizon-line"></div>
-
-  <!-- ════════════════════════════════════════════════════════════════
-       SECTION 1 — VISION
-  ═════════════════════════════════════════════════════════════════ -->
-  <section id="vision" class="section" aria-labelledby="vision-heading">
-    <div class="container">
-      <div class="vision-grid">
-
-        <!-- Graphic column -->
-        <div class="vision-graphic reveal">
-          <div class="field-art">
-            <div class="field-art-inner">
-              <div class="field-metric">
-                <div class="field-metric-val">110 Ha</div>
-                <div class="field-metric-lbl">Total Project Footprint</div>
-              </div>
-              <div class="field-metric" style="border-left-color: var(--forest);">
-                <div class="field-metric-val" style="color:var(--forest-mid);">$473K+</div>
-                <div class="field-metric-lbl">Phase 1 Launch Budget</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Text column -->
-        <div class="vision-text reveal reveal-delay-2">
-          <span class="eyebrow">The Corporate Vision</span>
-          <div class="gold-rule"></div>
-          <h2 class="section-title" id="vision-heading">
-            The Dawn of a New<br />Agricultural Standard
-          </h2>
-          <blockquote>
-            "Inspired by the horizon of a rising sun, Shifo GreenHorizon represents the future of regional food security, modern agribusiness, and sustainable land development."
-          </blockquote>
-          <p>
-            We are transforming 110 hectares of fertile land into a high-yield, technologically advanced agricultural powerhouse. By combining scalable open-field farming with protected cultivation infrastructure, we are bridging the gap between traditional agriculture and modern, climate-resilient crop production.
-          </p>
-          <p style="margin-top: 1.2rem;">
-            Our four-tier crop architecture — from ultra-fast vegetable cycles generating immediate cash flow, through rapid tropical income crops, to premium long-term orchard assets — ensures every hectare earns from day one while building lasting export-market dominance.
-          </p>
-        </div>
-
+        <a class="btn btn-gold" href="#invest">View Investment Tracks <span class="btn-arr">→</span></a>
+        <a class="btn btn-ghost" href="#crops">See Crop Plan <span class="btn-arr">→</span></a>
       </div>
     </div>
-  </section>
-
-  <div class="horizon-line"></div>
-
-  <!-- ════════════════════════════════════════════════════════════════
-       SECTION 2 — METRICS
-  ═════════════════════════════════════════════════════════════════ -->
-  <section id="metrics" class="section section--alt" aria-labelledby="metrics-heading">
-    <div class="container">
-
-      <div class="metrics-header reveal">
-        <span class="eyebrow">Project Scale &amp; Infrastructure</span>
-        <div class="gold-rule gold-rule--center"></div>
-        <h2 class="section-title" id="metrics-heading">
-          Operational Metrics &amp; Infrastructure Highlights
-        </h2>
-        <p style="max-width: none; text-align: center; color: var(--muted); font-size: 0.95rem;">
-          Every figure below represents a committed, engineered operational target — not a projection.
-        </p>
+    <div class="hero-right">
+      <div class="stat-panel">
+        <div class="stat-cell">
+          <div class="stat-val">110<span>Ha</span></div>
+          <div class="stat-lbl">Total Estate</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-val" id="counter1">$0</div>
+          <div class="stat-lbl">Launch Budget</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-val">13</div>
+          <div class="stat-lbl">Operating Greenhouses</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-val">82,100</div>
+          <div class="stat-lbl">Permanent Trees</div>
+        </div>
       </div>
-
-      <div class="metrics-grid">
-
-        <div class="metric-card reveal">
-          <div class="metric-icon">🌍</div>
-          <div>
-            <p class="metric-title">Total Project Footprint</p>
-            <p class="metric-body">
-              <strong>110 Hectares</strong> of strategically positioned agricultural land earmarked for phased, high-value development — 10 Ha currently producing, 100 Ha ready for immediate expansion.
-            </p>
-          </div>
-        </div>
-
-        <div class="metric-card reveal reveal-delay-1">
-          <div class="metric-icon">🏗️</div>
-          <div>
-            <p class="metric-title">Protected Cultivation</p>
-            <p class="metric-body">
-              Engineered infrastructure featuring a planned layout of <strong>50 to 70 modern high-tunnel greenhouses</strong>, optimised for premium quality, climate resilience, and ultra-fast vegetable cycle production.
-            </p>
-          </div>
-        </div>
-
-        <div class="metric-card reveal reveal-delay-2">
-          <div class="metric-icon">🌿</div>
-          <div>
-            <p class="metric-title">Commercial Cash Crops</p>
-            <p class="metric-body">
-              <strong>10 hectares dedicated to high-demand papaya cultivation</strong> (4 harvest seasons annually, 400–560 kg per tree per year), alongside high-yield regional produce including tomatoes and cucumbers for fast-food supply chains.
-            </p>
-          </div>
-        </div>
-
-        <div class="metric-card reveal reveal-delay-3">
-          <div class="metric-icon">♻️</div>
-          <div>
-            <p class="metric-title">Sustainable Ecosystem</p>
-            <p class="metric-body">
-              Designed to integrate <strong>eco-friendly farming methodologies</strong> — freshwater aquaculture, apiculture, livestock, and closed-loop fertigation — delivering efficient resource management and long-term economic stability.
-            </p>
-          </div>
-        </div>
-
+      <div class="hero-scroll-hint">
+        <div class="scroll-line"></div>
+        <span>Scroll to explore</span>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <div class="horizon-line"></div>
-
-  <!-- ════════════════════════════════════════════════════════════════
-       SECTION 3 — INVESTOR VALUE PROPOSITION
-  ═════════════════════════════════════════════════════════════════ -->
-  <section id="investor" class="section" aria-labelledby="investor-heading">
-    <div class="container">
-      <div class="investor-layout">
-
-        <!-- Main text column -->
-        <div>
-          <span class="eyebrow reveal">Investor Value Proposition</span>
-          <div class="gold-rule reveal"></div>
-          <h2 class="section-title reveal" id="investor-heading">
-            Built for Scale.<br />Managed for Yield.
-          </h2>
-          <p class="reveal reveal-delay-1">
-            Shifo GreenHorizon is structured from the ground up for institutional and private investors seeking exposure to high-growth, tangible assets in East Africa. Our mission goes beyond farming — we are building critical commercial infrastructure to meet the surging domestic and regional demand for premium agricultural products.
-          </p>
-
-          <h3 class="sub-heading reveal reveal-delay-2">Why Partner With Us?</h3>
-
-          <div class="investor-reasons">
-
-            <div class="reason-item reveal reveal-delay-1">
-              <div class="reason-num">01</div>
-              <div>
-                <p class="reason-title">Strategic Entry Point</p>
-                <p class="reason-body">
-                  Early-stage positioning in a rapidly expanding, high-demand regional agricultural sector. Somaliland's growing import dependency creates direct, recurring demand for locally produced premium fruit and vegetables.
-                </p>
-              </div>
-            </div>
-
-            <div class="reason-item reveal reveal-delay-2">
-              <div class="reason-num">02</div>
-              <div>
-                <p class="reason-title">Phased Risk Mitigation</p>
-                <p class="reason-body">
-                  A structured, step-by-step development roadmap allowing for scalable capital deployment and measurable operational milestones — from fast-cycle vegetable revenue to multi-year premium orchard export income.
-                </p>
-              </div>
-            </div>
-
-            <div class="reason-item reveal reveal-delay-3">
-              <div class="reason-num">03</div>
-              <div>
-                <p class="reason-title">Social &amp; Economic Impact</p>
-                <p class="reason-body">
-                  A project deeply rooted in community progress — mobilising 60+ local youth into a certified agro-workforce, advancing regional food security, and delivering measurable, auditable ESG outcomes for impact-oriented capital.
-                </p>
-              </div>
-            </div>
-
+<!-- ══════════════════════════════════════════════════════════
+     OWNER SPOTLIGHT
+══════════════════════════════════════════════════════════ -->
+<section id="owner" class="sec">
+  <div class="wrap">
+    <div class="owner-grid">
+      <div class="rv">
+        <div class="owner-photo-wrap">
+          <div class="owner-photo-frame">
+            <img src="shifo.png"
+                 alt="Shifo — Founder of Shifo GreenHorizon in the Papaya orchard, Borama"
+                 width="500" height="500"
+                 loading="eager" decoding="async"/>
           </div>
+          <p class="photo-caption">Figure 1: Shifo, Founder & CEO — Active papaya harvest operations, Borama Estate</p>
         </div>
-
-        <!-- Aside card -->
-        <div class="investor-aside reveal reveal-delay-2">
-          <div class="aside-card">
-            <span class="eyebrow" style="color:var(--gold);">At a Glance</span>
-            <p>
-              A snapshot of the key investment metrics that define the Shifo GreenHorizon commercial opportunity.
-            </p>
-            <div class="aside-stat">
-              <div class="aside-stat-row">
-                <span class="aside-stat-label">Phase 1 Budget</span>
-                <span class="aside-stat-value">$473K–$668K</span>
-              </div>
-              <div class="aside-stat-row">
-                <span class="aside-stat-label">Land Area</span>
-                <span class="aside-stat-value">110 Hectares</span>
-              </div>
-              <div class="aside-stat-row">
-                <span class="aside-stat-label">Permanent Plants</span>
-                <span class="aside-stat-value">82,100</span>
-              </div>
-              <div class="aside-stat-row">
-                <span class="aside-stat-label">Greenhouses</span>
-                <span class="aside-stat-value">50–70 Units</span>
-              </div>
-              <div class="aside-stat-row">
-                <span class="aside-stat-label">Youth Workforce</span>
-                <span class="aside-stat-value">60 Workers</span>
-              </div>
-              <div class="aside-stat-row">
-                <span class="aside-stat-label">Papaya Yield / Tree</span>
-                <span class="aside-stat-value">400–560 kg/yr</span>
-              </div>
-            </div>
-            <a class="btn btn-gold" href="#cta" style="width:100%; justify-content:center;">
-              Request Full Pitch Deck
-              <span class="btn-arrow">→</span>
-            </a>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
-
-  <!-- ════════════════════════════════════════════════════════════════
-       SECTION 4 — CALL TO ACTION
-  ═════════════════════════════════════════════════════════════════ -->
-  <section id="cta" class="section section--dark" aria-labelledby="cta-heading">
-    <div class="container">
-      <div class="cta-inner">
-
-        <span class="eyebrow reveal" style="color:var(--gold);">Institutional Engagement</span>
-        <h2 class="cta-title reveal reveal-delay-1" id="cta-heading">
-          Shape the <span class="horizon">Horizon</span><br />With Us.
-        </h2>
-        <p class="cta-body reveal reveal-delay-2">
-          We are currently opening doors to strategic partners, agritech collaborators, and visionary investors who want to be part of this foundational milestone.
-        </p>
-
-        <div class="cta-btn-wrap reveal reveal-delay-3">
-          <a class="btn btn-gold"
-             href="mailto:info@shifogreenhorizon.2bd.net"
-             aria-label="Inquire about investment opportunities at Shifo GreenHorizon">
-            Inquire About Investment Opportunities
-            <span class="btn-arrow">→</span>
-          </a>
-          <a class="btn btn-outline-light" href="#vision">
-            Review the Project
-          </a>
-        </div>
-
-        <p class="reveal reveal-delay-4" style="font-size:0.8rem; color:rgba(255,255,255,0.4); max-width:none; text-align:center; margin-top:1rem;">
-          For access to our comprehensive project blueprint, detailed financial models, and official pitch deck,<br />
-          please contact our development team at
-          <a href="mailto:info@shifogreenhorizon.2bd.net"
-             style="color:var(--gold); text-decoration:none; font-weight:500;">
-            info@shifogreenhorizon.2bd.net
-          </a>
-        </p>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════════════════════════════════════════════════════════════
-       FOOTER
-  ═════════════════════════════════════════════════════════════════ -->
-  <footer id="site-footer" role="contentinfo">
-    <div class="container">
-
-      <div class="footer-inner">
-
-        <!-- Brand block -->
-        <div class="footer-brand">
-          <div class="footer-logo-wrap">
-            <img
-              src="1000054505.png"
-              alt="Shifo GreenHorizon Footer Logo"
-              width="130"
-              height="130"
-              loading="lazy"
-              decoding="async"
-            />
+      <div class="rv d2">
+        <span class="eyebrow">The Founder</span>
+        <div class="gold-bar"></div>
+        <h2 class="sec-title light">Built From the Ground Up. Personally.</h2>
+        <blockquote>"We are not just farming land — we are engineering a new agricultural economy for Somaliland. Every tree planted is a commitment to our region's future."</blockquote>
+        <p class="sec-body light">Shifo GreenHorizon was founded on a singular conviction: that Somaliland's fertile land, free water resources, and motivated youth workforce are among East Africa's most underutilised assets. The founder operates directly from the estate — walking the rows, overseeing every planting cycle, and building the systems that will outlast any single harvest.</p>
+        <div class="founder-badge">
+          <div class="founder-badge-logo">
+            <img src="logo.png" alt="Shifo GreenHorizon Logo" width="48" height="48" loading="lazy"/>
           </div>
-          <div class="footer-brand-name">
-            Shifo GreenHorizon
+          <div class="founder-badge-info">
+            <strong>Shifo GreenHorizon</strong>
             <span>Borama · Somaliland · Est. 2025</span>
           </div>
         </div>
-
-        <div class="footer-divider" aria-hidden="true"></div>
-
-        <!-- Notice block -->
-        <div class="footer-notice">
-          <p>
-            This landing page is for informational purposes only and does not constitute a public offering or solicitation of investment. All financial projections are forward-looking estimates subject to operational and market risk.
-          </p>
-          <p style="margin-top: 0.8rem;">
-            Development enquiries:
-            <a href="mailto:info@shifogreenhorizon.2bd.net">info@shifogreenhorizon.2bd.net</a>
-          </p>
-        </div>
-
       </div>
-
-      <div class="footer-bottom">
-        <p class="footer-copy">© 2025 Shifo GreenHorizon. All rights reserved.</p>
-        <ul class="footer-legal">
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">Disclaimer</a></li>
-        </ul>
-      </div>
-
     </div>
-  </footer>
+  </div>
+</section>
 
-  <!-- ════════════════════════════════════════════════════════════════
-       JAVASCRIPT — Scroll nav + reveal
-  ═════════════════════════════════════════════════════════════════ -->
-  <script>
-    // ── Nav scroll state ──────────────────────────────────────────
-    (function () {
-      const nav = document.getElementById('site-nav');
-      const onScroll = () => {
-        nav.classList.toggle('scrolled', window.scrollY > 48);
-      };
-      window.addEventListener('scroll', onScroll, { passive: true });
-      onScroll();
-    })();
+<div class="hdivide"></div>
 
-    // ── Scroll reveal ─────────────────────────────────────────────
-    (function () {
-      const els = document.querySelectorAll('.reveal');
-      if (!els.length) return;
+<!-- ══════════════════════════════════════════════════════════
+     ABOUT / OVERVIEW
+══════════════════════════════════════════════════════════ -->
+<section id="about" class="sec">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-img-wrap rv">
+        <div class="about-img-frame">
+          <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&q=80&auto=format&fit=crop&crop=center"
+               alt="Shifo GreenHorizon Estate Fields" width="600" height="750" loading="lazy"/>
+        </div>
+        <div class="about-badge">
+          <strong>100</strong>
+          <span>Ha Free to Expand</span>
+        </div>
+      </div>
+      <div class="rv d2">
+        <span class="eyebrow">The Opportunity</span>
+        <div class="gold-bar"></div>
+        <h2 class="sec-title">10 Ha Producing.<br>100 Ha Waiting.</h2>
+        <p class="sec-body">Shifo GreenHorizon's 10-hectare papaya orchard is a live, harvesting asset — 4 seasons a year, every year. Backed by 13 operational greenhouses already serving the market, that proven cash flow now anchors an aggressive buildout across 100 free hectares with access to a completely free water source.</p>
+        <div class="about-features" style="margin-top:2.2rem">
+          <div class="feat rv d1">
+            <p class="feat-title">Producing Asset</p>
+            <p class="feat-body">10-Ha papaya orchard harvesting 4 seasons/year. 240-day cycle to first harvest, 400–560 kg/tree/yr.</p>
+          </div>
+          <div class="feat rv d2">
+            <p class="feat-title">13 Greenhouses Live</p>
+            <p class="feat-body">13 commercial high-tunnel greenhouses already in operation, supplying fresh produce to market.</p>
+          </div>
+          <div class="feat rv d3">
+            <p class="feat-title">Free Water Source</p>
+            <p class="feat-body">100 Ha of expansion land with abundant, free water access — engineered with pressurised drip infrastructure.</p>
+          </div>
+          <div class="feat rv d4">
+            <p class="feat-title">Integrated Ecosystem</p>
+            <p class="feat-body">Livestock, aquaculture, and apiculture alongside crop production for full-cycle resource efficiency.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      const io = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((e) => {
-            if (e.isIntersecting) {
-              e.target.classList.add('in-view');
-              io.unobserve(e.target);
-            }
-          });
-        },
-        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
-      );
+<div class="hdivide"></div>
 
-      els.forEach((el) => io.observe(el));
-    })();
+<!-- ══════════════════════════════════════════════════════════
+     GREENHOUSE SHOWCASE
+══════════════════════════════════════════════════════════ -->
+<section id="greenhouses" class="sec sec--alt">
+  <div class="wrap">
+    <div class="gh-header rv">
+      <span class="eyebrow">Protected Cultivation</span>
+      <div class="gold-bar center"></div>
+      <h2 class="sec-title" style="text-align:center">13 Greenhouses.<br>Already Serving the Market.</h2>
+      <p class="sec-body" style="text-align:center;margin-inline:auto;margin-top:.6rem">Our existing greenhouse infrastructure is not a future plan — it is an operational reality. Thirteen high-tunnel commercial greenhouses on the 10-hectare estate are currently producing and supplying fresh produce to local and regional wholesale markets.</p>
+    </div>
+    <div style="display:flex;justify-content:center;margin-bottom:3rem" class="rv">
+      <div class="gh-hero-stat">
+        <div class="gh-big">13</div>
+        <div>
+          <div style="font-family:var(--serif);font-size:1.2rem;font-weight:700;color:#fff;line-height:1">Operating Greenhouses</div>
+          <div class="gh-lbl">Currently active on the 10-Ha estate · Supplying local &amp; regional markets</div>
+        </div>
+      </div>
+    </div>
+    <div class="gh-grid rv">
+      <div class="gh-card">
+        <div class="gh-icon">🥬</div>
+        <p class="gh-card-title">Leafy Greens</p>
+        <p class="gh-card-body">Lettuce, spinach, and herbs at 30–45 day cycles. Fast-food and restaurant wholesale supply.</p>
+      </div>
+      <div class="gh-card">
+        <div class="gh-icon">🥒</div>
+        <p class="gh-card-title">Cucumbers</p>
+        <p class="gh-card-body">50–60 day greenhouse cycles. High-yield trellised rows optimised for burger and wrap supply chains.</p>
+      </div>
+      <div class="gh-card">
+        <div class="gh-icon">🍅</div>
+        <p class="gh-card-title">Tomatoes</p>
+        <p class="gh-card-body">75–90 day protected cycles. Premium quality, uniform sizing for wholesale grading and fast-food sauces.</p>
+      </div>
+      <div class="gh-card">
+        <div class="gh-icon">🌱</div>
+        <p class="gh-card-title">Seedling Nursery</p>
+        <p class="gh-card-body">Dedicated propagation space for papaya, avocado, and tropical seedlings ahead of field planting.</p>
+      </div>
+    </div>
+    <div class="gh-strip rv">
+      <div class="gh-strip-cell">
+        <div class="gh-strip-val">13</div>
+        <div class="gh-strip-lbl">Greenhouses Operating</div>
+      </div>
+      <div class="gh-strip-cell">
+        <div class="gh-strip-val">50–70</div>
+        <div class="gh-strip-lbl">Planned Expansion Target</div>
+      </div>
+      <div class="gh-strip-cell">
+        <div class="gh-strip-val">30–120</div>
+        <div class="gh-strip-lbl">Day Crop Cycles</div>
+      </div>
+      <div class="gh-strip-cell">
+        <div class="gh-strip-val">100 Ha</div>
+        <div class="gh-strip-lbl">Available for Greenhouse Expansion</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    // ── Smooth anchor for nav CTA ─────────────────────────────────
-    document.querySelectorAll('a[href^="#"]').forEach((a) => {
-      a.addEventListener('click', (e) => {
-        const target = document.querySelector(a.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
+<div class="hdivide"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     CROP TIERS
+══════════════════════════════════════════════════════════ -->
+<section id="crops" class="sec">
+  <div class="wrap">
+    <div class="crops-head">
+      <div class="rv">
+        <span class="eyebrow">Four-Tier Crop Architecture</span>
+        <div class="gold-bar"></div>
+        <h2 class="sec-title">Speed-Structured for<br>Maximum Cash Flow</h2>
+      </div>
+      <div class="rv d2">
+        <p class="sec-body">Fast vegetables fund the farm. Rapid tropicals build volume. Mid-term orchards add market diversity. Premium long-term assets lock in generational export value. Every hectare earns from day one.</p>
+      </div>
+    </div>
+
+    <div class="tier-block rv">
+      <div class="tier-head">
+        <div class="tier-num">T1</div>
+        <div><p class="tier-name">Ultra-Fast Vegetable Cash</p><p class="tier-win">Harvest in 1–4 Months · Fast-Food Supply Chain · Powered by 13 (→70) Greenhouses</p></div>
+        <span class="tier-tag">Immediate Revenue</span>
+      </div>
+      <div class="tier-crops" style="grid-template-columns:repeat(5,1fr)">
+        <div class="tcrop"><p class="tcrop-name">🥬 Lettuce</p><p class="tcrop-det">30–45 days · Greenhouse · Bulk salad/wrap supply</p></div>
+        <div class="tcrop"><p class="tcrop-name">🥒 Cucumber</p><p class="tcrop-det">50–60 days · High-tunnel · Burger &amp; wrap lines</p></div>
+        <div class="tcrop"><p class="tcrop-name">🍅 Tomato</p><p class="tcrop-det">75–90 days · Greenhouse · Fast-food &amp; wholesale</p></div>
+        <div class="tcrop"><p class="tcrop-name">🥔 Potato</p><p class="tcrop-det">90–120 days · Open field · French fry supply</p></div>
+        <div class="tcrop"><p class="tcrop-name">🧅 Onion</p><p class="tcrop-det">100–120 days · Intercropped alleys · All-season</p></div>
+      </div>
+    </div>
+
+    <div class="tier-block rv d1">
+      <div class="tier-head">
+        <div class="tier-num">T2</div>
+        <div><p class="tier-name">Rapid Tropical Income</p><p class="tier-win">Harvest in 8–18 Months · First Commercial Fruit Volume</p></div>
+        <span class="tier-tag">Cash-Flow Anchor</span>
+      </div>
+      <div class="tier-crops" style="grid-template-columns:repeat(3,1fr)">
+        <div class="tcrop"><p class="tcrop-name">🌿 Papaya</p><p class="tcrop-det">3,500 trees · 4-season harvest · 400–560 kg/tree/yr · 10-Ha already producing</p></div>
+        <div class="tcrop"><p class="tcrop-name">🍌 Banana</p><p class="tcrop-det">7,000 mats · Weekly cash-flow anchor · Local &amp; regional wholesale</p></div>
+        <div class="tcrop"><p class="tcrop-name">🍍 Pineapple</p><p class="tcrop-det">6,000 slips · High-density · Propagated via slips for premium yield</p></div>
+      </div>
+    </div>
+
+    <div class="tier-block rv d2">
+      <div class="tier-head">
+        <div class="tier-num">T3</div>
+        <div><p class="tier-name">Mid-Term Orchards</p><p class="tier-win">Harvest in 2–3 Years · Market Diversification</p></div>
+        <span class="tier-tag">Regional &amp; Export</span>
+      </div>
+      <div class="tier-crops" style="grid-template-columns:repeat(4,1fr)">
+        <div class="tcrop"><p class="tcrop-name">🍋 Citrus</p><p class="tcrop-det">3,000 ea: Clementine, Lemon, Lime, Citron — 12,000 total</p></div>
+        <div class="tcrop"><p class="tcrop-name">🍑 Stone Fruits</p><p class="tcrop-det">3,000 ea: Peach, Nectarine, Cherry Plum — 9,000 trees</p></div>
+        <div class="tcrop"><p class="tcrop-name">🍈 Hardy Tropicals</p><p class="tcrop-det">2,500 Guava · 1,500 Jujube · 1,500 Strawberry Guava</p></div>
+        <div class="tcrop"><p class="tcrop-name">🍇 Isabella Vines</p><p class="tcrop-det">1,500 trellised vines · Purple &amp; green · Juice &amp; fresh</p></div>
+      </div>
+    </div>
+
+    <div class="tier-block rv d3">
+      <div class="tier-head">
+        <div class="tier-num">T4</div>
+        <div><p class="tier-name">Premium Long-Term Assets</p><p class="tier-win">Harvest in 3–6 Years · Heavy-Hitting Elite Export Crops</p></div>
+        <span class="tier-tag" style="color:var(--gold);background:rgba(200,133,10,.1)">Export Dominance</span>
+      </div>
+      <div class="tier-crops" style="grid-template-columns:repeat(6,1fr)">
+        <div class="tcrop"><p class="tcrop-name">🥑 Avocado</p><p class="tcrop-det">8,000 trees · $250–$400/tree/yr · UAE &amp; EU</p></div>
+        <div class="tcrop"><p class="tcrop-name">🍊 Orange</p><p class="tcrop-det">6,000 trees · Orange &amp; Blood Orange · Gulf &amp; EU</p></div>
+        <div class="tcrop"><p class="tcrop-name">🥭 Mango</p><p class="tcrop-det">5,000 trees · Top-grade export · Regional &amp; intl</p></div>
+        <div class="tcrop"><p class="tcrop-name">🍏 Apple &amp; Pear</p><p class="tcrop-det">3,000 ea · 6,000 trees · Premium retail</p></div>
+        <div class="tcrop"><p class="tcrop-name">🌴 Date Palm</p><p class="tcrop-det">1,500 palms · Perimeter · High-value dried export</p></div>
+        <div class="tcrop"><p class="tcrop-name">🍦 Annona</p><p class="tcrop-det">2,000 custard apple · Niche premium dessert market</p></div>
+      </div>
+    </div>
+
+    <div class="strat-pair rv">
+      <div class="strat">
+        <p class="strat-lbl">Intercropping Shield</p>
+        <p class="strat-title">Zero Wasted Space During Tree Development</p>
+        <p class="strat-body">Fast-cycle Tier 1 vegetables planted in the wide alleys between slow-growing Tier 4 rows — generating immediate revenue while tree canopies develop over 3–5 years.</p>
+      </div>
+      <div class="strat">
+        <p class="strat-lbl">Water Prioritisation</p>
+        <p class="strat-title">Engineering Around the Free Water Source</p>
+        <p class="strat-body">High-moisture Tier 1 and Tier 2 blocks positioned closest to the main pump lines. Hardy crops placed on outer perimeters — a hydraulic zoning strategy that cuts pump energy costs significantly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hdivide"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     INVESTMENT TRACKS
+══════════════════════════════════════════════════════════ -->
+<section id="invest" class="sec sec--black">
+  <div class="wrap">
+    <div class="invest-head">
+      <div class="rv">
+        <span class="eyebrow">How To Invest</span>
+        <div class="gold-bar"></div>
+        <h2 class="sec-title light">Three Paths Into<br><em style="font-style:italic;color:var(--gold-lt)">the Estate</em></h2>
+      </div>
+      <div class="rv d2">
+        <p class="sec-body light">Whether you're a diaspora member investing $10 in a single tree, or an institution underwriting cold-storage infrastructure, Shifo has a structured, transparent vehicle for you.</p>
+      </div>
+    </div>
+    <div class="tracks">
+      <div class="track rv">
+        <span class="track-num">Track 01</span>
+        <h3 class="track-title">Fractional Tree Ownership</h3>
+        <p class="track-sub">Retail / Diaspora Track</p>
+        <div class="track-items">
+          <div class="track-item"><div class="track-dot"></div><p class="track-text"><strong>Papaya Tree — $10/unit</strong> · 3-year term · $45–$60 net return per year</p></div>
+          <div class="track-item"><div class="track-dot"></div><p class="track-text"><strong>Avocado Tree — $30/unit</strong> · 10-year term · $125–$200 net return per year</p></div>
+          <div class="track-item"><div class="track-dot"></div><p class="track-text">50/50 profit split · Formal certificates issued per pack (10 trees = 1 pack)</p></div>
+          <div class="track-item"><div class="track-dot"></div><p class="track-text">Quarterly or annual dividend distributions · Full management by Shifo</p></div>
+        </div>
+      </div>
+      <div class="track rv d1">
+        <span class="track-num">Track 02</span>
+        <h3 class="track-title">Infrastructure &amp; Technology Bonds</h3>
+        <p class="track-sub">Accredited Investor Track</p>
+        <div class="track-items">
+          <div class="track-item"><div class="track-dot"></div><p class="track-text"><strong>Solar cold-storage warehouse</strong> — $45,000 target, eliminates post-harvest spoilage</p></div>
+          <div class="track-item"><div class="track-dot"></div><p class="track-text"><strong>Greenhouse expansion</strong> — from 13 to 50–70 units, $15,000 next phase</p></div>
+          <div class="track-item"><div class="track-dot"></div><p class="track-text">Fixed-rate returns tied to total processed export volume</p></div>
+          <div class="track-item"><div class="track-dot"></div><p class="track-text">Secured against physical non-depreciating infrastructure assets</p></div>
+        </div>
+      </div>
+      <div class="track rv d2">
+        <span class="track-num">Track 03</span>
+        <h3 class="track-title">ESG Sustainable Development</h3>
+        <p class="track-sub">Impact / Philanthropic Track</p>
+        <div class="track-items">
+          <div class="track-item"><div class="track-dot"></div><p class="track-text"><strong>Women's Agricultural Training Institute</strong> — $29,000 educational infrastructure target</p></div>
+          <div class="track-item"><div class="track-dot"></div><p class="track-text">Vocational programmes for local women and agricultural students</p></div>
+          <div class="track-item"><div class="track-dot"></div><p class="track-text">Auditable ESG metrics: economic empowerment, food security, workforce upskilling</p></div>
+          <div class="track-item"><div class="track-dot"></div><p class="track-text">Eligible for corporate grant matching and philanthropic capital allocation</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     TREE CERTIFICATES
+══════════════════════════════════════════════════════════ -->
+<section id="certificates" class="sec sec--alt">
+  <div class="wrap">
+    <div class="cert-head">
+      <div class="rv">
+        <span class="eyebrow">Tree Ownership Program</span>
+        <div class="gold-bar"></div>
+        <h2 class="sec-title">Own a Tree.<br><em style="font-family:var(--serif);font-style:italic;color:var(--green2)">Earn the Harvest.</em></h2>
+      </div>
+      <div class="rv d2">
+        <p class="sec-body">Each tree is a living, yield-generating asset. Investors receive formal certificates, quarterly reporting, and a direct 50% share of their trees' profits — managed entirely by Shifo's professional team on your behalf.</p>
+      </div>
+    </div>
+    <div class="certs">
+      <div class="cert rv">
+        <div class="cert-stamp">🌿</div>
+        <p class="cert-eye">Asset Certificate · Series A</p>
+        <h3 class="cert-price">$10 per Tree</h3>
+        <p class="cert-variety">Carica papaya — Commercial Grade</p>
+        <div class="cert-divider"></div>
+        <div class="cert-grid">
+          <div><p class="cert-item-lbl">Annual Yield</p><p class="cert-item-val">90–120 kg</p></div>
+          <div><p class="cert-item-lbl">Net Return / Year</p><p class="cert-item-val gold">$45–$60</p></div>
+          <div><p class="cert-item-lbl">Term</p><p class="cert-item-val">3 Years</p></div>
+          <div><p class="cert-item-lbl">Profit Split</p><p class="cert-item-val">50 / 50</p></div>
+        </div>
+        <a class="cert-cta" href="#contact">Invest in Papaya Trees →</a>
+      </div>
+      <div class="cert rv d2">
+        <div class="cert-stamp">🥑</div>
+        <p class="cert-eye">Asset Certificate · Series B</p>
+        <h3 class="cert-price">$30 per Tree</h3>
+        <p class="cert-variety">Persea americana — Export Premium</p>
+        <div class="cert-divider"></div>
+        <div class="cert-grid">
+          <div><p class="cert-item-lbl">Annual Revenue</p><p class="cert-item-val">$250–$400</p></div>
+          <div><p class="cert-item-lbl">Net Return / Year</p><p class="cert-item-val gold">$125–$200</p></div>
+          <div><p class="cert-item-lbl">Term</p><p class="cert-item-val">10 Years</p></div>
+          <div><p class="cert-item-lbl">Profit Split</p><p class="cert-item-val">50 / 50</p></div>
+        </div>
+        <a class="cert-cta" href="#contact">Invest in Avocado Trees →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hdivide"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     INFRASTRUCTURE
+══════════════════════════════════════════════════════════ -->
+<section id="infrastructure" class="sec">
+  <div class="wrap">
+    <div class="infra-grid">
+      <div>
+        <span class="eyebrow rv">Asset Foundation</span>
+        <div class="gold-bar rv"></div>
+        <h2 class="sec-title rv">Infrastructure Built<br>to Last Decades</h2>
+        <div class="infra-list">
+          <div class="infra-item rv">
+            <div class="infra-icon">🌱</div>
+            <div><p class="infra-item-title">Land Security</p><p class="infra-item-body">10-Ha papaya orchard producing now, within a 110-hectare wholly-owned estate — 100 free hectares ready for expansion with zero land-tenure risk.</p></div>
+          </div>
+          <div class="infra-item rv d1">
+            <div class="infra-icon">🏗️</div>
+            <div><p class="infra-item-title">13 Operating Greenhouses</p><p class="infra-item-body">Thirteen commercial high-tunnel greenhouses fully operational on the 10-Ha estate. Infrastructure already proven — expansion to 50–70 units across 100 free hectares underway.</p></div>
+          </div>
+          <div class="infra-item rv d2">
+            <div class="infra-icon">💧</div>
+            <div><p class="infra-item-title">Free Water · 4 Boreholes</p><p class="infra-item-body">Fully operational underground wells deliver year-round, season-independent irrigation. The bedrock of our high-efficiency 6-inch HDPE drip network across 100 hectares.</p></div>
+          </div>
+          <div class="infra-item rv d3">
+            <div class="infra-icon">⚡</div>
+            <div><p class="infra-item-title">Zero-Cost Power</p><p class="infra-item-body">Free, uninterrupted power leveraged from adjacent factory operations dramatically lowers cold-storage and mechanical overhead costs.</p></div>
+          </div>
+          <div class="infra-item rv d4">
+            <div class="infra-icon">🚢</div>
+            <div><p class="infra-item-title">Export Logistics</p><p class="infra-item-body">Premium transit access to Djibouti port and regional trade corridors, enabling bulk export to Gulf and EU premium markets from Year 3.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="rv d2">
+        <div class="infra-nums">
+          <div class="infra-num-cell">
+            <div class="infra-big">$473K–</div>
+            <div class="infra-lbl light">Phase 1 Launch Budget (Low Estimate)</div>
+          </div>
+          <div class="infra-num-cell">
+            <div class="infra-sub">13</div>
+            <div class="infra-lbl dark">Greenhouses Operating Now</div>
+          </div>
+          <div class="infra-num-cell">
+            <div class="infra-sub">$60K–88K</div>
+            <div class="infra-lbl dark">Irrigation Infrastructure Budget</div>
+          </div>
+          <div class="infra-num-cell" style="grid-column:span 2">
+            <div class="infra-sub" style="color:var(--green2)">82,100</div>
+            <div class="infra-lbl dark">Total Permanent Plants &amp; Vines</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hdivide"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     WORKFORCE
+══════════════════════════════════════════════════════════ -->
+<section id="workforce" class="sec sec--alt">
+  <div class="wrap">
+    <div style="margin-bottom:3.5rem">
+      <span class="eyebrow rv">Agro-Squad Workforce Model</span>
+      <div class="gold-bar rv"></div>
+      <h2 class="sec-title rv">60 Local Youth Workers.<br><em style="font-family:var(--serif);font-style:italic;color:var(--green2)">4 Professional Squads.</em></h2>
+      <p class="sec-body rv d1">Local unemployed youth mobilised into a disciplined, multi-tiered workforce under 3 professional Agricultural Leads. The "Show, Do, Teach" model builds certified experts from within.</p>
+    </div>
+    <div class="wf-grid">
+      <div>
+        <div class="squad-cards rv">
+          <div class="squad"><div class="squad-cnt">20<span>workers</span></div><div><p class="squad-name">Veggie &amp; Greenhouse Squad</p><p class="squad-duty">Seedling prep, weeding, staking, greenhouse pruning, and rolling 2-week vegetable planting schedules across all 13 (→70) greenhouses.</p></div></div>
+          <div class="squad"><div class="squad-cnt">20<span>workers</span></div><div><p class="squad-name">Orchard &amp; Agroforestry Squad</p><p class="squad-duty">Tree hole digging, organic composting, staking, mulching, and pruning for the 82,100 permanent orchard plants across all four crop tiers.</p></div></div>
+          <div class="squad"><div class="squad-cnt">10<span>workers</span></div><div><p class="squad-name">Hydro-Water &amp; Infrastructure Squad</p><p class="squad-duty">Pump house monitoring, filter clearing, pipeline leak repair, fertigation management and block valve control across the full drip network.</p></div></div>
+          <div class="squad"><div class="squad-cnt">10<span>workers</span></div><div><p class="squad-name">Packhouse, Logistics &amp; Integration</p><p class="squad-duty">Post-harvest washing, fast-food grading, livestock management (sheep, goats, chickens), aquaculture ponds and beehive operations.</p></div></div>
+        </div>
+        <div class="cert-path rv d2">
+          <div class="cert-level"><div class="cert-level-num">L1</div><div class="cert-level-title">Certified Cultivator</div></div>
+          <div class="cert-level"><div class="cert-level-num">L2</div><div class="cert-level-title">Drip Technician</div></div>
+          <div class="cert-level"><div class="cert-level-num">L3</div><div class="cert-level-title">Quality Specialist</div></div>
+          <div class="cert-level"><div class="cert-level-num">L4</div><div class="cert-level-title">Squad Leader</div></div>
+        </div>
+      </div>
+      <div class="rv d2">
+        <p class="eyebrow" style="margin-bottom:1.4rem">Daily SOP Timeline</p>
+        <div class="sop-list">
+          <div class="sop-row"><p class="sop-time">06:00–06:30</p><p class="sop-act"><strong>Morning Briefing</strong><br><em>Review orders, allocate harvesting targets by squad</em></p></div>
+          <div class="sop-row"><p class="sop-time">06:30–11:30</p><p class="sop-act"><strong>Core Field Execution</strong><br><em>Cool-hours harvesting for optimal shelf life; primary drip irrigation run; greenhouse cycles</em></p></div>
+          <div class="sop-row"><p class="sop-time">11:30–14:30</p><p class="sop-act"><strong>Midday Heat Shelter &amp; Training</strong><br><em>Tool maintenance, packhouse cleaning, 1-hour structured training session out of direct sun</em></p></div>
+          <div class="sop-row"><p class="sop-time">14:30–17:30</p><p class="sop-act"><strong>Planting &amp; Maintenance</strong><br><em>Pit digging, transplanting seedlings, lateral drip maintenance, orchard work</em></p></div>
+          <div class="sop-row"><p class="sop-time">17:30–18:00</p><p class="sop-act"><strong>Harvest Logging &amp; Lockup</strong><br><em>Yield data entry, pump station securement, daily report to leads</em></p></div>
+        </div>
+        <div class="training-box">
+          <p class="training-box-lbl">Training Protocol</p>
+          <p><strong>15%</strong> Classroom · <strong>35%</strong> Field Practicals · <strong>50%</strong> Peer-to-Peer</p>
+          <p class="training-note">Experienced youth train new entries — knowledge compounds inside the team, reducing reliance on outside consultants over time. Tiered L1→L4 certification career path.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hdivide"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     ECOSYSTEM
+══════════════════════════════════════════════════════════ -->
+<section id="ecosystem" class="sec">
+  <div class="wrap">
+    <div class="eco-head">
+      <div class="rv">
+        <span class="eyebrow">Integrated Agribusiness</span>
+        <div class="gold-bar"></div>
+        <h2 class="sec-title">Beyond the Orchard:<br>A Full Ecosystem</h2>
+      </div>
+      <div class="rv d2">
+        <p class="sec-body">Livestock, fish, and bees turn farm waste into revenue and farm inputs into profit — a closed-loop system that dramatically reduces external supply costs and adds multiple income streams.</p>
+      </div>
+    </div>
+    <div class="eco-grid rv">
+      <div class="eco-card"><div class="eco-icon-wrap">🐑</div><p class="eco-title">Sheep &amp; Goats</p><p class="eco-body">Grazing in cleared orchard alleys keeps vegetation down at zero cost. Manure is processed into organic compost for fertigation.</p></div>
+      <div class="eco-card"><div class="eco-icon-wrap">🐓</div><p class="eco-title">Poultry</p><p class="eco-body">Chickens provide pest control in vegetable zones, eggs for local sale, and high-nitrogen litter for soil amendment.</p></div>
+      <div class="eco-card"><div class="eco-icon-wrap">🐟</div><p class="eco-title">Freshwater Aquaculture</p><p class="eco-body">On-farm fish ponds turn surplus irrigation water into a protein crop. Nutrient-rich pond water cycles back into the drip fertigation system.</p></div>
+      <div class="eco-card"><div class="eco-icon-wrap">🍯</div><p class="eco-title">Apiculture (Bees)</p><p class="eco-body">Beehives drive pollination efficiency across all fruit tree tiers. Honey production adds a premium branded product line for local and export markets.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="hdivide"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     BUDGET
+══════════════════════════════════════════════════════════ -->
+<section id="budget" class="sec sec--alt">
+  <div class="wrap">
+    <div class="budget-head">
+      <div class="rv">
+        <span class="eyebrow">Phase 1 Capital Requirements</span>
+        <div class="gold-bar"></div>
+        <h2 class="sec-title">Full Setup Budget<br>&amp; Allocation</h2>
+      </div>
+      <div class="rv d2">
+        <p class="sec-body">Every line item reflects the realistic cost of building a 100-hectare professional agricultural operation from a free-water land base. Total range: <strong>$473,500 – $668,000</strong>.</p>
+      </div>
+    </div>
+    <table class="btable rv">
+      <thead>
+        <tr><th>Category</th><th>Description</th><th>Low Est.</th><th>High Est.</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Vegetable Seeds &amp; Tubers</td><td>Lettuce, cucumber, tomato, potato, onion — Tier 1 fast cycles</td><td class="amt">$5,000</td><td class="amt">$8,000</td></tr>
+        <tr><td>Citrus Varieties (18,000 trees)</td><td>Clementine, Lemon, Lime, Citron — certified grafted stock</td><td class="amt">$90,000</td><td class="amt">$126,000</td></tr>
+        <tr><td>Stone Fruits &amp; Pomes (24,000 trees)</td><td>Peach, Nectarine, Cherry Plum, Apple, Pear</td><td class="amt">$144,000</td><td class="amt">$192,000</td></tr>
+        <tr><td>Large &amp; High-Density Tropicals (29,100)</td><td>Avocado, Mango, Banana, Pineapple, Date Palm, Annona</td><td class="amt">$125,000</td><td class="amt">$173,500</td></tr>
+        <tr><td>Berries &amp; Small Tropicals (4,500)</td><td>Guava, Strawberry Guava, Jujube, Isabella Grape</td><td class="amt">$34,500</td><td class="amt">$55,500</td></tr>
+        <tr><td>Core Irrigation Infrastructure</td><td>Pumps, sand/disc filters, HDPE mains, drip tape/tubes, Venturi fertigation</td><td class="amt">$60,000</td><td class="amt">$88,000</td></tr>
+        <tr><td>Field Labor &amp; Land Preparation</td><td>Clearing, raised beds, pit digging, fencing — 100-hectare preparation</td><td class="amt">$15,000</td><td class="amt">$25,000</td></tr>
+      </tbody>
+      <tfoot>
+        <tr><td colspan="2"><strong>Grand Total Launch Budget</strong></td><td class="amt">$473,500</td><td class="amt">$668,000</td></tr>
+      </tfoot>
+    </table>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     ROADMAP
+══════════════════════════════════════════════════════════ -->
+<section id="roadmap" class="sec sec--dark">
+  <div class="wrap">
+    <div class="rm-head">
+      <span class="eyebrow rv" style="color:var(--gold)">6-Year Vision</span>
+      <div class="gold-bar rv"></div>
+      <h2 class="sec-title light rv">From 13 Greenhouses<br>to <em style="font-style:italic;color:var(--gold-lt)">Regional Leadership</em></h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item rv">
+        <div class="tl-marker"></div>
+        <p class="tl-year">Year 1</p>
+        <h3 class="tl-title">Fast Cash &amp; Foundation</h3>
+        <p class="tl-body">Scale 13 operating greenhouses toward 50+ with Tier 1 vegetable cycles. Establish 6-inch HDPE mains and pump station. Plant Tier 2 tropicals. Onboard all 60 youth workers.</p>
+      </div>
+      <div class="tl-item rv d1">
+        <div class="tl-marker"></div>
+        <p class="tl-year">Year 2</p>
+        <h3 class="tl-title">Orchard Build &amp; Volume Scale</h3>
+        <p class="tl-body">Plant full Tier 3 orchard (Citrus, Stone Fruits, Hardy Tropicals). Vegetable and greenhouse revenue funds orchard maintenance. Packhouse upgraded for bulk fast-food supply contracts.</p>
+      </div>
+      <div class="tl-item rv d2">
+        <div class="tl-marker"></div>
+        <p class="tl-year">Year 3</p>
+        <h3 class="tl-title">Tier 4 Dominance Begins</h3>
+        <p class="tl-body">Avocado, Mango, Orange first yields. International export via Djibouti cold-chain launched. Dry-fruit processing facility operational. Training Institute graduates reach Squad Leader level.</p>
+      </div>
+      <div class="tl-item rv d3">
+        <div class="tl-marker"></div>
+        <p class="tl-year">Years 4–6</p>
+        <h3 class="tl-title">Estate Maturation &amp; Export Brand</h3>
+        <p class="tl-body">All 82,100 trees and vines at or approaching peak yield. Full brand recognition in UAE, KSA, Qatar, EU. Agro-tourism launched. Farm becomes a regional agricultural training centre of excellence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     CONTACT
+══════════════════════════════════════════════════════════ -->
+<section id="contact" class="sec sec--black">
+  <div class="wrap">
+    <div class="contact-inner">
+      <p class="eyebrow rv" style="justify-content:center;margin-bottom:1.2rem">Join the Estate</p>
+      <h2 class="contact-title rv d1">Ready to <em>Invest</em> in<br>Something That Grows?</h2>
+      <p class="contact-body rv d2">Express your interest today. Our team will send you the full Investment Memorandum and guide you through the tree ownership process.</p>
+      <form class="contact-form rv d3" onsubmit="handleSubmit(event)">
+        <div class="contact-row">
+          <input type="text" placeholder="Full Name" required>
+          <input type="email" placeholder="Email Address" required>
+        </div>
+        <div class="contact-row">
+          <input type="text" placeholder="Country of Residence">
+          <select>
+            <option value="" disabled selected>Investment Interest</option>
+            <option>Track 1 — Tree Ownership ($10–$300)</option>
+            <option>Track 1 — Tree Ownership ($300–$2,000)</option>
+            <option>Track 1 — Tree Pack ($2,000+)</option>
+            <option>Track 2 — Infrastructure Bond</option>
+            <option>Track 3 — ESG / Grant Capital</option>
+            <option>General Inquiry</option>
+          </select>
+        </div>
+        <textarea placeholder="Tell us about your investment goals or any questions (optional)"></textarea>
+        <button type="submit" class="contact-submit">Send Expression of Interest →</button>
+        <p class="contact-disclaimer">Your information is kept strictly confidential and will only be used to respond to your enquiry. This is not a binding financial commitment.</p>
+      </form>
+      <div id="formSuccess" style="display:none;margin-top:2rem;text-align:center">
+        <p style="font-family:var(--serif);font-size:1.5rem;color:var(--gold-lt);margin-bottom:.5rem">Thank you for your interest.</p>
+        <p style="font-size:.85rem;color:rgba(255,255,255,.5)">We'll be in touch with the full Investment Memorandum shortly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-brand">
+    <div class="footer-logo-wrap">
+      <img src="logo.png" alt="Shifo GreenHorizon" width="46" height="46" loading="lazy"/>
+    </div>
+    <span class="footer-name">Shifo <span>GreenHorizon</span></span>
+  </div>
+  <p class="footer-note">This website is for informational purposes only and does not constitute a public offering. All financial projections are forward-looking estimates. Investors should conduct independent due diligence before making any investment decision.</p>
+  <p class="footer-copy">© 2025 Shifo GreenHorizon. All rights reserved.</p>
+</footer>
+
+<script>
+  /* Nav scroll */
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60), {passive:true});
+
+  /* Hero parallax load */
+  const hero = document.getElementById('hero');
+  setTimeout(() => hero.classList.add('loaded'), 80);
+
+  /* Scroll reveal — use both class names for compatibility */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on','visible'); } });
+  }, { threshold: 0.11 });
+  document.querySelectorAll('.rv, .reveal').forEach(el => io.observe(el));
+
+  /* Counter animation */
+  function countUp(el, target, prefix, suffix, dur) {
+    const t0 = performance.now();
+    function frame(t) {
+      const p = Math.min((t - t0) / dur, 1);
+      const v = Math.round((1 - Math.pow(1 - p, 3)) * target);
+      el.textContent = prefix + v.toLocaleString() + suffix;
+      if (p < 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+  let counted = false;
+  const cEl = document.getElementById('counter1');
+  const heroIo = new IntersectionObserver((e) => {
+    if (e[0].isIntersecting && !counted) { counted = true; setTimeout(() => countUp(cEl, 473500, '$', '', 2200), 700); }
+  }, { threshold: 0.4 });
+  heroIo.observe(hero);
+
+  /* Hamburger */
+  const hbg = document.getElementById('hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  hbg.addEventListener('click', () => {
+    const open = navLinks.style.display === 'flex';
+    navLinks.style.cssText = open ? '' : 'display:flex;flex-direction:column;position:fixed;top:70px;left:0;right:0;background:rgba(6,14,9,.97);padding:2rem var(--gut);gap:1.5rem;z-index:200;backdrop-filter:blur(12px)';
+    const ss = hbg.querySelectorAll('span');
+    ss[0].style.transform = open ? '' : 'rotate(45deg) translate(5px,5px)';
+    ss[1].style.opacity   = open ? '' : '0';
+    ss[2].style.transform = open ? '' : 'rotate(-45deg) translate(5px,-5px)';
+  });
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => {
+      navLinks.style.cssText = '';
+      hbg.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
     });
-  </script>
+  });
 
+  /* Contact form */
+  function handleSubmit(e) {
+    e.preventDefault();
+    e.target.style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }
+
+  /* Smooth anchor */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior:'smooth', block:'start' }); }
+    });
+  });
+</script>
 </body>
 </html>
