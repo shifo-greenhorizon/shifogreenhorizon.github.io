@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shifo GreenHorizon — A Premier 110-Hectare Agribusiness Development Initiative in Somaliland. Investor-grade agricultural infrastructure, protected cultivation, and sustainable food production." />
+  <meta name="theme-color" content="#0f3a20" />
+  <title>Shifo GreenHorizon — Cultivating a Sustainable, High-Growth Agricultural Future</title>
+
+  <style>
+    /* ═══════════════════════════════════════════════════════════════
+       RESET & CUSTOM PROPERTIES
+    ═══════════════════════════════════════════════════════════════ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      /* Brand palette */
+      --canvas:       #faf9f6;
+      --canvas-2:     #f2f0eb;
+      --canvas-dark:  #ede9e1;
+      --forest:       #0f3a20;
+      --forest-mid:   #1e5c36;
+      --forest-lite:  #e8f0eb;
+      --gold:         #e67e22;
+      --gold-deep:    #c96a12;
+      --gold-pale:    #fdf0e4;
+      --charcoal:     #1a1a1a;
+      --body-text:    #3a3a3a;
+      --muted:        #7a8a80;
+      --rule:         rgba(15, 58, 32, 0.12);
+      --rule-gold:    rgba(230, 126, 34, 0.3);
+
+      /* Typography */
+      --font: 'Inter', 'Helvetica Neue', Arial, system-ui, sans-serif;
+
+      /* Spacing rhythm */
+      --section-pad: clamp(80px, 10vw, 140px);
+      --container:   1080px;
+      --gutter:      clamp(24px, 5vw, 60px);
+
+      /* Motion */
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font);
+      background-color: var(--canvas);
+      color: var(--body-text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: var(--gold);
+      color: var(--forest);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       LAYOUT UTILITIES
+    ═══════════════════════════════════════════════════════════════ */
+    .container {
+      max-width: var(--container);
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+    }
+
+    .section {
+      padding-block: var(--section-pad);
+    }
+
+    .section--alt {
+      background-color: var(--canvas-2);
+    }
+
+    .section--dark {
+      background-color: var(--forest);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       TYPOGRAPHY SCALE
+    ═══════════════════════════════════════════════════════════════ */
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.1rem;
+    }
+
+    .eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 2px;
+      background: var(--gold);
+      vertical-align: middle;
+      margin-right: 10px;
+      margin-bottom: 1px;
+    }
+
+    h1, h2, h3, h4 {
+      color: var(--forest);
+      line-height: 1.15;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .display-title {
+      font-size: clamp(2rem, 4.5vw, 3.6rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: var(--forest);
+    }
+
+    .display-title em {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--forest-mid);
+    }
+
+    .section-title {
+      font-size: clamp(1.5rem, 3vw, 2.4rem);
+      font-weight: 700;
+      color: var(--forest);
+      margin-bottom: 1.2rem;
+    }
+
+    .section-title--light {
+      color: #ffffff;
+    }
+
+    .sub-heading {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--forest);
+      margin-bottom: 1.2rem;
+      margin-top: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sub-heading::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    p {
+      font-size: 1.02rem;
+      line-height: 1.85;
+      color: var(--body-text);
+      max-width: 68ch;
+    }
+
+    p.wide { max-width: none; }
+
+    /* ═══════════════════════════════════════════════════════════════
+       DECORATIVE ELEMENTS
+    ═══════════════════════════════════════════════════════════════ */
+    .gold-rule {
+      width: 56px;
+      height: 3px;
+      background: linear-gradient(to right, var(--gold), var(--gold-deep));
+      border-radius: 2px;
+      margin-bottom: 2rem;
+    }
+
+    .gold-rule--center { margin-inline: auto; }
+
+    .horizon-line {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--rule-gold), transparent);
+      margin-block: 0;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       ██ NAVIGATION BAR
+    ═══════════════════════════════════════════════════════════════ */
+    #site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 249, 246, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--rule);
+      transition: box-shadow 0.3s var(--ease);
+    }
+
+    #site-nav.scrolled {
+      box-shadow: 0 4px 32px rgba(15, 58, 32, 0.08);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      gap: 2rem;
+    }
+
+    /* ── Logo in nav ── */
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .nav-brand-logo-wrap {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 50%;
+      border: 2px solid rgba(15, 58, 32, 0.15);
+    }
+
+    .nav-brand-logo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .nav-brand-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--forest);
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    .nav-brand-name span {
+      display: block;
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--body-text);
+      text-decoration: none;
+      transition: color 0.2s;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--forest);
+      border-bottom-color: var(--gold);
+    }
+
+    .nav-cta-btn {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--forest);
+      padding: 11px 22px;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.25s var(--ease), transform 0.2s;
+      white-space: nowrap;
+    }
+
+    .nav-cta-btn:hover {
+      background: var(--forest-mid);
+      transform: translateY(-1px);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       ██ HERO / HEADER
+    ═══════════════════════════════════════════════════════════════ */
+    #hero {
+      background-color: var(--canvas);
+      padding-top: clamp(64px, 10vw, 120px);
+      padding-bottom: clamp(64px, 10vw, 120px);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle radial glow behind logo */
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 700px; height: 700px;
+      background: radial-gradient(ellipse at center,
+        rgba(230, 126, 34, 0.07) 0%,
+        rgba(15, 58, 32, 0.04) 40%,
+        transparent 70%);
+      pointer-events: none;
+    }
+
+    /* ── LOGO CONTAINER — robust rendering solution ── */
+    .hero-logo-wrap {
+      /* 1. Flexbox centering container */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      /* 2. Constrain width so emblem never overpowers layout */
+      width: 100%;
+      max-width: 280px;
+      margin-inline: auto;
+      margin-bottom: clamp(2rem, 4vw, 3rem);
+
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-logo-wrap img {
+      /* 3. Prevent warping/stretching; preserve circular emblem integrity */
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      object-position: center;
+
+      /* 4. Crisp rendering at all DPI */
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+
+      /* Remove any white box if PNG has transparency */
+      background: transparent;
+
+      /* Subtle shadow to lift the emblem off the canvas */
+      filter: drop-shadow(0 8px 24px rgba(15, 58, 32, 0.12))
+              drop-shadow(0 2px 6px rgba(15, 58, 32, 0.08));
+
+      transition: transform 0.5s var(--ease), filter 0.5s var(--ease);
+    }
+
+    .hero-logo-wrap img:hover {
+      transform: scale(1.03);
+      filter: drop-shadow(0 12px 36px rgba(15, 58, 32, 0.18))
+              drop-shadow(0 4px 10px rgba(230, 126, 34, 0.15));
+    }
+
+    /* 4. Responsive media queries for logo scaling */
+    @media (max-width: 768px) {
+      .hero-logo-wrap {
+        max-width: 200px;
+        margin-bottom: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-logo-wrap {
+        max-width: 160px;
+        margin-bottom: 1.6rem;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      .hero-logo-wrap {
+        max-width: 300px;
+      }
+    }
+
+    /* ── Hero text ── */
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border: 1px solid var(--rule);
+      padding: 7px 16px;
+      border-radius: 100px;
+      margin-bottom: 1.8rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-tag-dot {
+      width: 6px; height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: pulse 2.2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.5; transform: scale(0.7); }
+    }
+
+    .hero-h1 {
+      font-size: clamp(1.9rem, 4.5vw, 3.6rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: var(--forest);
+      max-width: 820px;
+      margin-inline: auto;
+      margin-bottom: 1.2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-h1 .accent { color: var(--gold); }
+
+    .hero-h2 {
+      font-size: clamp(1rem, 2vw, 1.22rem);
+      font-weight: 400;
+      color: var(--muted);
+      letter-spacing: 0;
+      max-width: 580px;
+      margin-inline: auto;
+      margin-bottom: 3rem;
+      line-height: 1.65;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── Stat strip below hero ── */
+    .hero-stats {
+      margin-top: clamp(3rem, 6vw, 5rem);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--rule);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-stat {
+      background: var(--canvas);
+      padding: 2.2rem 1.5rem;
+      text-align: center;
+      transition: background 0.3s;
+    }
+
+    .hero-stat:hover { background: var(--gold-pale); }
+
+    .hero-stat-value {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: var(--forest);
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-stat-value .unit {
+      font-size: 55%;
+      font-weight: 500;
+      color: var(--gold);
+      vertical-align: super;
+    }
+
+    .hero-stat-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       ██ SECTION 1 — VISION
+    ═══════════════════════════════════════════════════════════════ */
+    #vision {
+      padding-block: var(--section-pad);
+    }
+
+    .vision-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 7rem);
+      align-items: center;
+    }
+
+    .vision-graphic {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Decorative abstract field graphic using CSS */
+    .field-art {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: var(--forest-lite);
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid var(--rule);
+    }
+
+    .field-art-row {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 6px;
+      background: var(--forest);
+      border-radius: 2px 2px 0 0;
+    }
+
+    .field-art::before,
+    .field-art::after {
+      content: '';
+      position: absolute;
+    }
+
+    .field-art::before {
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          180deg,
+          rgba(15, 58, 32, 0.07) 0px,
+          rgba(15, 58, 32, 0.07) 1px,
+          transparent 1px,
+          transparent 22px
+        );
+    }
+
+    .field-art::after {
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(230, 126, 34, 0.06) 0%,
+        transparent 50%,
+        rgba(15, 58, 32, 0.08) 100%
+      );
+    }
+
+    .field-art-inner {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 2rem;
+      z-index: 2;
+    }
+
+    .field-metric {
+      background: rgba(255,255,255,0.9);
+      border-left: 4px solid var(--gold);
+      padding: 1rem 1.4rem;
+      margin-top: 0.6rem;
+      backdrop-filter: blur(4px);
+    }
+
+    .field-metric-val {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--forest);
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+
+    .field-metric-lbl {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .vision-text blockquote {
+      border-left: 3px solid var(--gold);
+      padding-left: 1.4rem;
+      margin-block: 2rem;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--forest-mid);
+      line-height: 1.65;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       ██ SECTION 2 — METRICS
+    ═══════════════════════════════════════════════════════════════ */
+    #metrics {
+      padding-block: var(--section-pad);
+      background: var(--canvas-2);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .metrics-header {
+      text-align: center;
+      max-width: 640px;
+      margin-inline: auto;
+      margin-bottom: clamp(3rem, 5vw, 5rem);
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+    }
+
+    .metric-card {
+      background: var(--canvas);
+      padding: clamp(1.8rem, 3vw, 2.8rem);
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 1.4rem;
+      align-items: flex-start;
+      transition: background 0.25s var(--ease);
+    }
+
+    .metric-card:hover { background: var(--gold-pale); }
+
+    .metric-icon {
+      width: 52px; height: 52px;
+      background: var(--forest-lite);
+      border: 1px solid rgba(15, 58, 32, 0.15);
+      border-radius: 3px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      transition: background 0.25s;
+    }
+
+    .metric-card:hover .metric-icon {
+      background: var(--gold);
+    }
+
+    .metric-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--forest);
+      margin-bottom: 0.5rem;
+    }
+
+    .metric-body {
+      font-size: 0.92rem;
+      line-height: 1.75;
+      color: var(--body-text);
+      max-width: none;
+    }
+
+    .metric-body strong {
+      color: var(--forest);
+      font-weight: 700;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       ██ SECTION 3 — INVESTOR VALUE
+    ═══════════════════════════════════════════════════════════════ */
+    #investor {
+      padding-block: var(--section-pad);
+    }
+
+    .investor-layout {
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      gap: clamp(3rem, 6vw, 7rem);
+      align-items: flex-start;
+    }
+
+    .investor-reasons {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .reason-item {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 1.4rem;
+      padding: 1.8rem 0;
+      border-bottom: 1px solid var(--rule);
+      align-items: flex-start;
+      transition: transform 0.25s var(--ease);
+    }
+
+    .reason-item:first-child { padding-top: 0; }
+    .reason-item:last-child  { border-bottom: none; }
+    .reason-item:hover       { transform: translateX(4px); }
+
+    .reason-num {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      background: var(--gold-pale);
+      border: 1px solid var(--rule-gold);
+      width: 36px; height: 36px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .reason-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--forest);
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
+    }
+
+    .reason-body {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--body-text);
+      max-width: none;
+    }
+
+    /* Investor aside */
+    .investor-aside {
+      position: sticky;
+      top: 90px;
+    }
+
+    .aside-card {
+      background: var(--forest);
+      padding: clamp(2rem, 4vw, 3rem);
+      border-radius: 4px;
+    }
+
+    .aside-card p {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.92rem;
+      line-height: 1.75;
+      max-width: none;
+      margin-bottom: 1.8rem;
+    }
+
+    .aside-stat {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .aside-stat-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .aside-stat-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .aside-stat-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .aside-stat-value {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: -0.02em;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       ██ SECTION 4 — CALL TO ACTION
+    ═══════════════════════════════════════════════════════════════ */
+    #cta {
+      padding-block: var(--section-pad);
+      background: var(--forest);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Horizon glow */
+    #cta::before {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: 50%;
+      transform: translateX(-50%);
+      width: 900px; height: 300px;
+      background: radial-gradient(ellipse at center bottom,
+        rgba(230, 126, 34, 0.18) 0%,
+        transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Rising sun decorative arc */
+    #cta::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 600px; height: 300px;
+      border-radius: 300px 300px 0 0;
+      border: 1px solid rgba(230, 126, 34, 0.12);
+      pointer-events: none;
+    }
+
+    .cta-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      margin-inline: auto;
+    }
+
+    .cta-title {
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      margin-bottom: 1.2rem;
+      line-height: 1.1;
+    }
+
+    .cta-title .horizon { color: var(--gold); }
+
+    .cta-body {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.68);
+      max-width: 52ch;
+      margin-inline: auto;
+      margin-bottom: 3rem;
+    }
+
+    .cta-btn-wrap {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 16px 34px;
+      border-radius: 2px;
+      transition: all 0.3s var(--ease);
+      cursor: pointer;
+      border: none;
+      outline: none;
+      white-space: nowrap;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(230, 126, 34, 0.3);
+    }
+
+    .btn-gold:hover {
+      background: var(--gold-deep);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 36px rgba(230, 126, 34, 0.45);
+      letter-spacing: 0.13em;
+    }
+
+    .btn-gold:active {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(230, 126, 34, 0.3);
+    }
+
+    .btn-outline-light {
+      background: transparent;
+      color: rgba(255,255,255,0.85);
+      border: 1.5px solid rgba(255,255,255,0.25);
+    }
+
+    .btn-outline-light:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(255,255,255,0.5);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-dark {
+      background: transparent;
+      color: var(--forest);
+      border: 1.5px solid rgba(15, 58, 32, 0.3);
+    }
+
+    .btn-outline-dark:hover {
+      background: var(--forest-lite);
+      border-color: var(--forest);
+      transform: translateY(-2px);
+    }
+
+    /* Arrow icon in button */
+    .btn-arrow {
+      transition: transform 0.3s var(--ease);
+    }
+    .btn:hover .btn-arrow { transform: translateX(4px); }
+
+    /* ═══════════════════════════════════════════════════════════════
+       ██ FOOTER
+    ═══════════════════════════════════════════════════════════════ */
+    #site-footer {
+      background: #060e09;
+      padding-block: clamp(3rem, 5vw, 5rem);
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    /* Footer logo block */
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .footer-logo-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      /* Constrained logo rendering in footer */
+      max-width: 130px;
+    }
+
+    .footer-logo-wrap img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      filter: brightness(1) drop-shadow(0 2px 8px rgba(230,126,34,0.2));
+    }
+
+    .footer-brand-name {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.9);
+      letter-spacing: -0.01em;
+    }
+
+    .footer-brand-name span {
+      display: block;
+      font-size: 0.6rem;
+      font-weight: 400;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-top: 2px;
+    }
+
+    /* Footer divider */
+    .footer-divider {
+      width: 1px;
+      height: 80px;
+      background: rgba(255,255,255,0.08);
+    }
+
+    /* Footer notice */
+    .footer-notice {
+      text-align: right;
+    }
+
+    .footer-notice p {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.7;
+      max-width: 42ch;
+      margin-left: auto;
+    }
+
+    .footer-notice a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .footer-notice a:hover {
+      color: #f0a54a;
+    }
+
+    .footer-bottom {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-copy {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.22);
+      letter-spacing: 0.06em;
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+    }
+
+    .footer-legal a {
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.22);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      transition: color 0.2s;
+    }
+
+    .footer-legal a:hover { color: rgba(255,255,255,0.55); }
+
+    /* ═══════════════════════════════════════════════════════════════
+       SCROLL REVEAL ANIMATIONS
+    ═══════════════════════════════════════════════════════════════ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
+    }
+
+    .reveal.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ═══════════════════════════════════════════════════════════════
+       RESPONSIVE BREAKPOINTS
+    ═══════════════════════════════════════════════════════════════ */
+    @media (max-width: 960px) {
+      .vision-grid       { grid-template-columns: 1fr; }
+      .investor-layout   { grid-template-columns: 1fr; }
+      .investor-aside    { position: static; }
+      .hero-stats        { grid-template-columns: repeat(2, 1fr); }
+      .footer-inner      { grid-template-columns: 1fr; text-align: center; }
+      .footer-divider    { display: none; }
+      .footer-notice     { text-align: center; }
+      .footer-notice p   { margin-inline: auto; }
+      .footer-logo-wrap  { margin-inline: auto; }
+    }
+
+    @media (max-width: 700px) {
+      .metrics-grid { grid-template-columns: 1fr; }
+      .nav-links    { display: none; }
+      .hero-stats   { grid-template-columns: repeat(2, 1fr); }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-stats { grid-template-columns: 1fr 1fr; }
+      .metric-card { grid-template-columns: 1fr; }
+      .reason-item { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       NAVIGATION
+  ═════════════════════════════════════════════════════════════════ -->
+  <nav id="site-nav" role="navigation" aria-label="Main Navigation">
+    <div class="container">
+      <div class="nav-inner">
+
+        <a class="nav-brand" href="#hero" aria-label="Shifo GreenHorizon Home">
+          <div class="nav-brand-logo-wrap">
+            <img src="1000054505.png"
+                 alt="Shifo GreenHorizon Emblem"
+                 width="40" height="40"
+                 loading="eager"
+                 decoding="async" />
+          </div>
+          <div class="nav-brand-name">
+            Shifo GreenHorizon
+            <span>Borama · Somaliland</span>
+          </div>
+        </a>
+
+        <ul class="nav-links" role="list">
+          <li><a href="#vision">Vision</a></li>
+          <li><a href="#metrics">Project</a></li>
+          <li><a href="#investor">Investors</a></li>
+          <li><a href="#cta">Contact</a></li>
+        </ul>
+
+        <a class="nav-cta-btn" href="#cta">Invest Now</a>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       HERO
+  ═════════════════════════════════════════════════════════════════ -->
+  <header id="hero" role="banner">
+    <div class="container">
+
+      <!-- ── LOGO: robust rendering solution ── -->
+      <div class="hero-logo-wrap" role="img" aria-label="Shifo GreenHorizon Logo">
+        <img
+          src="1000054505.png"
+          alt="Shifo GreenHorizon — Circular Agricultural Emblem"
+          width="280"
+          height="280"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
+      </div>
+
+      <div class="hero-tag">
+        <span class="hero-tag-dot"></span>
+        Shifo GreenHorizon · Agribusiness Venture · Somaliland
+      </div>
+
+      <h1 class="hero-h1">
+        Cultivating a <span class="accent">Sustainable,</span><br />
+        High-Growth Agricultural Future.
+      </h1>
+
+      <h2 class="hero-h2">
+        A Premier 110-Hectare Agribusiness Development Initiative in Somaliland.
+      </h2>
+
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#cta">
+          Inquire About Investment
+          <span class="btn-arrow">→</span>
+        </a>
+        <a class="btn btn-outline-dark" href="#vision">
+          Explore the Vision
+        </a>
+      </div>
+
+      <!-- Stat strip -->
+      <div class="hero-stats">
+        <div class="hero-stat reveal">
+          <div class="hero-stat-value">110<span class="unit">Ha</span></div>
+          <div class="hero-stat-label">Total Land Footprint</div>
+        </div>
+        <div class="hero-stat reveal reveal-delay-1">
+          <div class="hero-stat-value">50–70</div>
+          <div class="hero-stat-label">Planned Greenhouses</div>
+        </div>
+        <div class="hero-stat reveal reveal-delay-2">
+          <div class="hero-stat-value">10<span class="unit">Ha</span></div>
+          <div class="hero-stat-label">Active Papaya Orchard</div>
+        </div>
+        <div class="hero-stat reveal reveal-delay-3">
+          <div class="hero-stat-value">4<span class="unit">×</span></div>
+          <div class="hero-stat-label">Harvest Seasons / Year</div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <div class="horizon-line"></div>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       SECTION 1 — VISION
+  ═════════════════════════════════════════════════════════════════ -->
+  <section id="vision" class="section" aria-labelledby="vision-heading">
+    <div class="container">
+      <div class="vision-grid">
+
+        <!-- Graphic column -->
+        <div class="vision-graphic reveal">
+          <div class="field-art">
+            <div class="field-art-inner">
+              <div class="field-metric">
+                <div class="field-metric-val">110 Ha</div>
+                <div class="field-metric-lbl">Total Project Footprint</div>
+              </div>
+              <div class="field-metric" style="border-left-color: var(--forest);">
+                <div class="field-metric-val" style="color:var(--forest-mid);">$473K+</div>
+                <div class="field-metric-lbl">Phase 1 Launch Budget</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text column -->
+        <div class="vision-text reveal reveal-delay-2">
+          <span class="eyebrow">The Corporate Vision</span>
+          <div class="gold-rule"></div>
+          <h2 class="section-title" id="vision-heading">
+            The Dawn of a New<br />Agricultural Standard
+          </h2>
+          <blockquote>
+            "Inspired by the horizon of a rising sun, Shifo GreenHorizon represents the future of regional food security, modern agribusiness, and sustainable land development."
+          </blockquote>
+          <p>
+            We are transforming 110 hectares of fertile land into a high-yield, technologically advanced agricultural powerhouse. By combining scalable open-field farming with protected cultivation infrastructure, we are bridging the gap between traditional agriculture and modern, climate-resilient crop production.
+          </p>
+          <p style="margin-top: 1.2rem;">
+            Our four-tier crop architecture — from ultra-fast vegetable cycles generating immediate cash flow, through rapid tropical income crops, to premium long-term orchard assets — ensures every hectare earns from day one while building lasting export-market dominance.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="horizon-line"></div>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       SECTION 2 — METRICS
+  ═════════════════════════════════════════════════════════════════ -->
+  <section id="metrics" class="section section--alt" aria-labelledby="metrics-heading">
+    <div class="container">
+
+      <div class="metrics-header reveal">
+        <span class="eyebrow">Project Scale &amp; Infrastructure</span>
+        <div class="gold-rule gold-rule--center"></div>
+        <h2 class="section-title" id="metrics-heading">
+          Operational Metrics &amp; Infrastructure Highlights
+        </h2>
+        <p style="max-width: none; text-align: center; color: var(--muted); font-size: 0.95rem;">
+          Every figure below represents a committed, engineered operational target — not a projection.
+        </p>
+      </div>
+
+      <div class="metrics-grid">
+
+        <div class="metric-card reveal">
+          <div class="metric-icon">🌍</div>
+          <div>
+            <p class="metric-title">Total Project Footprint</p>
+            <p class="metric-body">
+              <strong>110 Hectares</strong> of strategically positioned agricultural land earmarked for phased, high-value development — 10 Ha currently producing, 100 Ha ready for immediate expansion.
+            </p>
+          </div>
+        </div>
+
+        <div class="metric-card reveal reveal-delay-1">
+          <div class="metric-icon">🏗️</div>
+          <div>
+            <p class="metric-title">Protected Cultivation</p>
+            <p class="metric-body">
+              Engineered infrastructure featuring a planned layout of <strong>50 to 70 modern high-tunnel greenhouses</strong>, optimised for premium quality, climate resilience, and ultra-fast vegetable cycle production.
+            </p>
+          </div>
+        </div>
+
+        <div class="metric-card reveal reveal-delay-2">
+          <div class="metric-icon">🌿</div>
+          <div>
+            <p class="metric-title">Commercial Cash Crops</p>
+            <p class="metric-body">
+              <strong>10 hectares dedicated to high-demand papaya cultivation</strong> (4 harvest seasons annually, 400–560 kg per tree per year), alongside high-yield regional produce including tomatoes and cucumbers for fast-food supply chains.
+            </p>
+          </div>
+        </div>
+
+        <div class="metric-card reveal reveal-delay-3">
+          <div class="metric-icon">♻️</div>
+          <div>
+            <p class="metric-title">Sustainable Ecosystem</p>
+            <p class="metric-body">
+              Designed to integrate <strong>eco-friendly farming methodologies</strong> — freshwater aquaculture, apiculture, livestock, and closed-loop fertigation — delivering efficient resource management and long-term economic stability.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="horizon-line"></div>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       SECTION 3 — INVESTOR VALUE PROPOSITION
+  ═════════════════════════════════════════════════════════════════ -->
+  <section id="investor" class="section" aria-labelledby="investor-heading">
+    <div class="container">
+      <div class="investor-layout">
+
+        <!-- Main text column -->
+        <div>
+          <span class="eyebrow reveal">Investor Value Proposition</span>
+          <div class="gold-rule reveal"></div>
+          <h2 class="section-title reveal" id="investor-heading">
+            Built for Scale.<br />Managed for Yield.
+          </h2>
+          <p class="reveal reveal-delay-1">
+            Shifo GreenHorizon is structured from the ground up for institutional and private investors seeking exposure to high-growth, tangible assets in East Africa. Our mission goes beyond farming — we are building critical commercial infrastructure to meet the surging domestic and regional demand for premium agricultural products.
+          </p>
+
+          <h3 class="sub-heading reveal reveal-delay-2">Why Partner With Us?</h3>
+
+          <div class="investor-reasons">
+
+            <div class="reason-item reveal reveal-delay-1">
+              <div class="reason-num">01</div>
+              <div>
+                <p class="reason-title">Strategic Entry Point</p>
+                <p class="reason-body">
+                  Early-stage positioning in a rapidly expanding, high-demand regional agricultural sector. Somaliland's growing import dependency creates direct, recurring demand for locally produced premium fruit and vegetables.
+                </p>
+              </div>
+            </div>
+
+            <div class="reason-item reveal reveal-delay-2">
+              <div class="reason-num">02</div>
+              <div>
+                <p class="reason-title">Phased Risk Mitigation</p>
+                <p class="reason-body">
+                  A structured, step-by-step development roadmap allowing for scalable capital deployment and measurable operational milestones — from fast-cycle vegetable revenue to multi-year premium orchard export income.
+                </p>
+              </div>
+            </div>
+
+            <div class="reason-item reveal reveal-delay-3">
+              <div class="reason-num">03</div>
+              <div>
+                <p class="reason-title">Social &amp; Economic Impact</p>
+                <p class="reason-body">
+                  A project deeply rooted in community progress — mobilising 60+ local youth into a certified agro-workforce, advancing regional food security, and delivering measurable, auditable ESG outcomes for impact-oriented capital.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Aside card -->
+        <div class="investor-aside reveal reveal-delay-2">
+          <div class="aside-card">
+            <span class="eyebrow" style="color:var(--gold);">At a Glance</span>
+            <p>
+              A snapshot of the key investment metrics that define the Shifo GreenHorizon commercial opportunity.
+            </p>
+            <div class="aside-stat">
+              <div class="aside-stat-row">
+                <span class="aside-stat-label">Phase 1 Budget</span>
+                <span class="aside-stat-value">$473K–$668K</span>
+              </div>
+              <div class="aside-stat-row">
+                <span class="aside-stat-label">Land Area</span>
+                <span class="aside-stat-value">110 Hectares</span>
+              </div>
+              <div class="aside-stat-row">
+                <span class="aside-stat-label">Permanent Plants</span>
+                <span class="aside-stat-value">82,100</span>
+              </div>
+              <div class="aside-stat-row">
+                <span class="aside-stat-label">Greenhouses</span>
+                <span class="aside-stat-value">50–70 Units</span>
+              </div>
+              <div class="aside-stat-row">
+                <span class="aside-stat-label">Youth Workforce</span>
+                <span class="aside-stat-value">60 Workers</span>
+              </div>
+              <div class="aside-stat-row">
+                <span class="aside-stat-label">Papaya Yield / Tree</span>
+                <span class="aside-stat-value">400–560 kg/yr</span>
+              </div>
+            </div>
+            <a class="btn btn-gold" href="#cta" style="width:100%; justify-content:center;">
+              Request Full Pitch Deck
+              <span class="btn-arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       SECTION 4 — CALL TO ACTION
+  ═════════════════════════════════════════════════════════════════ -->
+  <section id="cta" class="section section--dark" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="cta-inner">
+
+        <span class="eyebrow reveal" style="color:var(--gold);">Institutional Engagement</span>
+        <h2 class="cta-title reveal reveal-delay-1" id="cta-heading">
+          Shape the <span class="horizon">Horizon</span><br />With Us.
+        </h2>
+        <p class="cta-body reveal reveal-delay-2">
+          We are currently opening doors to strategic partners, agritech collaborators, and visionary investors who want to be part of this foundational milestone.
+        </p>
+
+        <div class="cta-btn-wrap reveal reveal-delay-3">
+          <a class="btn btn-gold"
+             href="mailto:info@shifogreenhorizon.2bd.net"
+             aria-label="Inquire about investment opportunities at Shifo GreenHorizon">
+            Inquire About Investment Opportunities
+            <span class="btn-arrow">→</span>
+          </a>
+          <a class="btn btn-outline-light" href="#vision">
+            Review the Project
+          </a>
+        </div>
+
+        <p class="reveal reveal-delay-4" style="font-size:0.8rem; color:rgba(255,255,255,0.4); max-width:none; text-align:center; margin-top:1rem;">
+          For access to our comprehensive project blueprint, detailed financial models, and official pitch deck,<br />
+          please contact our development team at
+          <a href="mailto:info@shifogreenhorizon.2bd.net"
+             style="color:var(--gold); text-decoration:none; font-weight:500;">
+            info@shifogreenhorizon.2bd.net
+          </a>
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       FOOTER
+  ═════════════════════════════════════════════════════════════════ -->
+  <footer id="site-footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer-inner">
+
+        <!-- Brand block -->
+        <div class="footer-brand">
+          <div class="footer-logo-wrap">
+            <img
+              src="1000054505.png"
+              alt="Shifo GreenHorizon Footer Logo"
+              width="130"
+              height="130"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="footer-brand-name">
+            Shifo GreenHorizon
+            <span>Borama · Somaliland · Est. 2025</span>
+          </div>
+        </div>
+
+        <div class="footer-divider" aria-hidden="true"></div>
+
+        <!-- Notice block -->
+        <div class="footer-notice">
+          <p>
+            This landing page is for informational purposes only and does not constitute a public offering or solicitation of investment. All financial projections are forward-looking estimates subject to operational and market risk.
+          </p>
+          <p style="margin-top: 0.8rem;">
+            Development enquiries:
+            <a href="mailto:info@shifogreenhorizon.2bd.net">info@shifogreenhorizon.2bd.net</a>
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2025 Shifo GreenHorizon. All rights reserved.</p>
+        <ul class="footer-legal">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Disclaimer</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       JAVASCRIPT — Scroll nav + reveal
+  ═════════════════════════════════════════════════════════════════ -->
+  <script>
+    // ── Nav scroll state ──────────────────────────────────────────
+    (function () {
+      const nav = document.getElementById('site-nav');
+      const onScroll = () => {
+        nav.classList.toggle('scrolled', window.scrollY > 48);
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+
+    // ── Scroll reveal ─────────────────────────────────────────────
+    (function () {
+      const els = document.querySelectorAll('.reveal');
+      if (!els.length) return;
+
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add('in-view');
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      );
+
+      els.forEach((el) => io.observe(el));
+    })();
+
+    // ── Smooth anchor for nav CTA ─────────────────────────────────
+    document.querySelectorAll('a[href^="#"]').forEach((a) => {
+      a.addEventListener('click', (e) => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
