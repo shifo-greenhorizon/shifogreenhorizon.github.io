@@ -387,16 +387,6 @@
   ══════════════════════════════════════════════════════════ */
   #workforce{padding-block:var(--pad);background:var(--cream2)}
   .wf-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:flex-start}
-  .squad-cards{display:flex;flex-direction:column;gap:1.5px;background:var(--rule)}
-  .squad{
-    background:#fff;display:grid;grid-template-columns:60px 1fr;gap:1.1rem;
-    padding:1.5rem;border-left:3px solid transparent;transition:border-color .3s,background .3s;align-items:flex-start
-  }
-  .squad:hover{border-left-color:var(--gold);background:var(--cream)}
-  .squad-cnt{font-family:var(--serif);font-size:1.9rem;font-weight:700;color:var(--gold);line-height:1}
-  .squad-cnt span{display:block;font-family:var(--sans);font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);margin-top:3px}
-  .squad-name{font-size:.76rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--forest);margin-bottom:.35rem}
-  .squad-duty{font-size:.82rem;line-height:1.65;color:#5a6e62}
   .cert-path{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5px;background:var(--rule);margin-top:2rem}
   .cert-level{background:var(--cream2);padding:1.3rem;text-align:center}
   .cert-level-num{font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--gold);margin-bottom:.35rem}
@@ -412,12 +402,53 @@
   .training-box p{font-family:var(--serif);font-size:1rem;color:var(--forest);line-height:1.5;max-width:none}
   .training-box .training-note{font-family:var(--sans);font-size:.82rem;color:#5a6e62;margin-top:.5rem;line-height:1.6}
 
+  /* WORKFORCE — DEPARTMENT GRID */
+  .wf-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5px;background:var(--rule);margin-bottom:3rem}
+  .wf-stat{background:#fff;padding:1.6rem 1.4rem;text-align:center}
+  .wf-stat-num{font-family:var(--serif);font-size:2.1rem;font-weight:700;color:var(--gold)}
+  .wf-stat-lbl{font-size:.62rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--gray);margin-top:.3rem}
+  .dept-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--rule);margin-bottom:1.5px}
+  .dept{
+    background:#fff;padding:1.5rem 1.4rem;border-left:3px solid transparent;
+    transition:border-color .3s,background .3s;
+  }
+  .dept:hover{border-left-color:var(--gold);background:var(--cream)}
+  .dept-top{display:flex;justify-content:space-between;align-items:flex-start;gap:.6rem;margin-bottom:.6rem}
+  .dept-name{font-size:.78rem;font-weight:700;letter-spacing:.04em;color:var(--forest);line-height:1.3}
+  .dept-cnt{font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--gold);white-space:nowrap;line-height:1}
+  .dept-cnt span{display:block;font-family:var(--sans);font-size:.55rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);margin-top:2px;text-align:right}
+  .dept-mgr{display:inline-block;font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);background:rgba(200,133,10,.1);padding:3px 9px;border-radius:3px;margin-bottom:.6rem}
+  .dept-duty{font-size:.79rem;line-height:1.6;color:#5a6e62}
+  .leadership-band{background:var(--forest);padding:2rem 2.2rem;margin-top:1.5px;display:grid;grid-template-columns:repeat(6,1fr);gap:1.6rem}
+  .lead-cell{text-align:left}
+  .lead-cnt{font-family:var(--serif);font-size:1.4rem;font-weight:700;color:var(--gold-lt)}
+  .lead-title{font-size:.62rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.8);line-height:1.4;margin-top:.25rem}
+
+  /* PERMACULTURE BORDER */
+  .pc-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5px;background:var(--rule);margin-bottom:3rem}
+  .pc-stat{background:#fff;padding:1.6rem 1.4rem;text-align:center}
+  .pc-stat-num{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--gold)}
+  .pc-stat-lbl{font-size:.62rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--gray);margin-top:.3rem}
+  .pc-band{display:flex;border:1px solid var(--rule);margin-bottom:3rem;overflow:hidden}
+  .pc-band-seg{padding:1.6rem 1.2rem;position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:120px}
+  .pc-band-seg .pc-tier-lbl{font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-bottom:.3rem}
+  .pc-band-seg .pc-tier-name{font-family:var(--serif);font-size:1.05rem;font-weight:700;color:#fff;line-height:1.2}
+  .pc-band-seg .pc-tier-sp{font-size:.68rem;color:rgba(255,255,255,.7);margin-top:.25rem}
+  .pc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5px;background:var(--rule);margin-bottom:3rem}
+  .pc-card{background:#fff;padding:1.5rem 1.3rem;border-left:3px solid transparent;transition:border-color .3s,background .3s}
+  .pc-card:hover{border-left-color:var(--gold);background:var(--cream)}
+  .pc-card-icon{font-size:1.5rem;margin-bottom:.6rem}
+  .pc-card-name{font-size:.78rem;font-weight:700;letter-spacing:.03em;color:var(--forest);margin-bottom:.3rem}
+  .pc-card-qty{font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--gold);margin-bottom:.4rem}
+  .pc-card-body{font-size:.78rem;line-height:1.6;color:#5a6e62}
+  .pc-tables{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+
   /* ══════════════════════════════════════════════════════════
      ECOSYSTEM
   ══════════════════════════════════════════════════════════ */
   #ecosystem{padding-block:var(--pad)}
   .eco-head{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-bottom:3.5rem;align-items:flex-end}
-  .eco-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5px;background:var(--rule)}
+  .eco-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5px;background:var(--rule)}
   .eco-card{background:#fff;padding:2.2rem 1.8rem;transition:background .3s}
   .eco-card:hover{background:var(--forest)}
   .eco-card:hover .eco-title,.eco-card:hover .eco-body{color:#fff}
@@ -439,6 +470,24 @@
   .btable td.amt{font-family:var(--serif);font-size:.95rem;font-weight:600;color:var(--green2);white-space:nowrap}
   .btable tfoot td{background:var(--forest);color:#fff;font-weight:700;border:none;padding:15px 16px;font-size:.9rem}
   .btable tfoot td.amt{font-family:var(--serif);font-size:1.25rem;font-weight:700;color:var(--gold-lt)}
+
+  /* MASTER PLAN TABLE */
+  .mp-head{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-bottom:3rem;align-items:flex-end}
+  .mp-scroll{width:100%;overflow-x:auto;border:1px solid var(--rule);background:#fff}
+  table.mptable{width:100%;min-width:980px;border-collapse:collapse;font-size:.82rem}
+  .mptable thead tr{background:var(--forest);color:#fff}
+  .mptable th{padding:14px 16px;font-family:var(--sans);font-size:.64rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-align:left;white-space:nowrap}
+  .mptable td{padding:14px 16px;color:var(--forest);border-bottom:1px solid var(--rule);vertical-align:top;line-height:1.55}
+  .mptable tbody tr:hover td{background:rgba(13,51,25,.035)}
+  .mptable tr:nth-child(even) td{background:rgba(13,51,25,.025)}
+  .mptable tr:nth-child(even):hover td{background:rgba(13,51,25,.05)}
+  .mp-sector{font-family:var(--serif);font-weight:700;color:var(--forest);font-size:.92rem;white-space:nowrap}
+  .mp-land{font-family:var(--serif);font-weight:600;color:var(--green2);white-space:nowrap}
+  .mp-qty{font-weight:700;color:var(--gold);white-space:pre-line}
+  .mp-foot{margin-top:2.2rem;background:var(--forest);padding:2.4rem 2.6rem;color:#fff}
+  .mp-foot-title{font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--gold-lt);margin-bottom:.8rem}
+  .mp-foot-body{font-size:.86rem;line-height:1.8;color:rgba(255,255,255,.82)}
+  .mp-foot-body strong{color:#fff}
 
   /* ══════════════════════════════════════════════════════════
      ROADMAP
@@ -503,13 +552,21 @@
      RESPONSIVE
   ══════════════════════════════════════════════════════════ */
   @media(max-width:960px){
-    .hero-content,.owner-grid,.about-grid,.invest-head,.infra-grid,.wf-grid,.eco-head,.budget-head,.crops-head,.cert-head,.tracks{grid-template-columns:1fr;gap:3rem}
+    .hero-content,.owner-grid,.about-grid,.invest-head,.infra-grid,.wf-grid,.eco-head,.budget-head,.crops-head,.cert-head,.tracks,.mp-head{grid-template-columns:1fr;gap:3rem}
     .tracks{grid-template-columns:1fr}
     .stat-panel{grid-template-columns:1fr 1fr}
     .hero-right{align-items:flex-start}
     .gh-grid{grid-template-columns:1fr 1fr}
     .gh-strip{grid-template-columns:1fr 1fr}
-    .eco-grid{grid-template-columns:1fr 1fr}
+    .eco-grid{grid-template-columns:1fr 1fr 1fr}
+    .dept-grid{grid-template-columns:1fr 1fr}
+    .wf-stats{grid-template-columns:1fr 1fr}
+    .leadership-band{grid-template-columns:repeat(3,1fr)}
+    .pc-grid{grid-template-columns:repeat(3,1fr)}
+    .pc-stats{grid-template-columns:1fr 1fr}
+    .pc-tables{grid-template-columns:1fr}
+    .pc-band{flex-wrap:wrap}
+    .pc-band-seg{min-width:45%;flex:1}
     .timeline{grid-template-columns:1fr 1fr;gap:2.5rem}
     .timeline::before{display:none}
     .strat-pair,.certs{grid-template-columns:1fr}
@@ -523,10 +580,16 @@
     .tier-tag{display:none}
     .tier-crops{grid-template-columns:1fr 1fr!important}
     .gh-grid,.eco-grid,.gh-strip{grid-template-columns:1fr 1fr}
+    .dept-grid{grid-template-columns:1fr}
+    .wf-stats{grid-template-columns:1fr 1fr}
+    .leadership-band{grid-template-columns:1fr 1fr;padding:1.6rem}
+    .pc-grid{grid-template-columns:1fr 1fr}
+    .pc-band-seg{min-width:100%}
     .timeline{grid-template-columns:1fr}
     .contact-row{grid-template-columns:1fr}
     .infra-nums{grid-template-columns:1fr}
     .infra-num-cell:first-child{grid-column:span 1}
+    .mp-foot{padding:1.8rem 1.6rem}
     footer{flex-direction:column;text-align:center}
     .footer-note{text-align:center}
   }
@@ -556,6 +619,8 @@
     <li><a href="#about">Overview</a></li>
     <li><a href="#greenhouses">Greenhouses</a></li>
     <li><a href="#crops">Crop Plan</a></li>
+    <li><a href="#masterplan">Master Plan</a></li>
+    <li><a href="#permaculture">Permaculture</a></li>
     <li><a href="#invest">Investment</a></li>
     <li><a href="#workforce">Team</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -769,14 +834,14 @@
         <h2 class="sec-title">Speed-Structured for<br>Maximum Cash Flow</h2>
       </div>
       <div class="rv d2">
-        <p class="sec-body">Fast vegetables fund the farm. Rapid tropicals build volume. Mid-term orchards add market diversity. Premium long-term assets lock in generational export value. Every hectare earns from day one.</p>
+        <p class="sec-body">Fast vegetables and root crops fund the farm. Rapid tropicals build volume. Mid-term orchards add market diversity. Premium long-term assets lock in generational export value. Every hectare — and every greenhouse — earns from day one. Quantities below are fully reconciled with the 110-hectare master plan.</p>
       </div>
     </div>
 
     <div class="tier-block rv">
       <div class="tier-head">
         <div class="tier-num">T1</div>
-        <div><p class="tier-name">Ultra-Fast Vegetable Cash</p><p class="tier-win">Harvest in 1–4 Months · Fast-Food Supply Chain · Powered by 13 (→70) Greenhouses</p></div>
+        <div><p class="tier-name">Ultra-Fast Vegetable &amp; Root Cash</p><p class="tier-win">Harvest in 1–4 Months · Fast-Food Supply Chain &amp; Greenhouse Berries · Powered by 13 (→70) Greenhouses</p></div>
         <span class="tier-tag">Immediate Revenue</span>
       </div>
       <div class="tier-crops" style="grid-template-columns:repeat(6,1fr)">
@@ -786,49 +851,57 @@
         <div class="tcrop"><p class="tcrop-name">🥔 Potato</p><p class="tcrop-det">90–120 days · Open field · French fry supply</p></div>
         <div class="tcrop"><p class="tcrop-name">🧅 Onion</p><p class="tcrop-det">100–120 days · Intercropped alleys · All-season</p></div>
         <div class="tcrop"><p class="tcrop-name">🌶️ Capsicum</p><p class="tcrop-det">Green · Yellow · Red Bell &amp; Chili — Greenhouse &amp; open field · Fast-food &amp; wholesale</p></div>
+        <div class="tcrop"><p class="tcrop-name">🫐 Blueberry</p><p class="tcrop-det">12,000 bushes · Protected greenhouse beds · Premium clamshell export</p></div>
+        <div class="tcrop"><p class="tcrop-name">🍇 Blackberry</p><p class="tcrop-det">12,000 bushes · Protected greenhouse beds · Premium clamshell export</p></div>
+        <div class="tcrop"><p class="tcrop-name">🍈 Strawberry Guava</p><p class="tcrop-det">6,000 plugs · Greenhouse-raised · Niche luxury fruit</p></div>
+        <div class="tcrop"><p class="tcrop-name">🫚 Ginger &amp; Turmeric</p><p class="tcrop-det">200 kg root rhizomes · 8–10 months · Root lifting · Spice export</p></div>
+        <div class="tcrop"><p class="tcrop-name">🎋 Sugar Cane</p><p class="tcrop-det">1,000 setts · 10–12 months · Open field · Local processing</p></div>
       </div>
     </div>
 
     <div class="tier-block rv d1">
       <div class="tier-head">
         <div class="tier-num">T2</div>
-        <div><p class="tier-name">Rapid Tropical Income</p><p class="tier-win">Harvest in 8–18 Months · First Commercial Fruit Volume</p></div>
+        <div><p class="tier-name">Rapid Tropical &amp; Stimulant Income</p><p class="tier-win">Harvest in 8–18 Months · First Commercial Fruit Volume</p></div>
         <span class="tier-tag">Cash-Flow Anchor</span>
       </div>
       <div class="tier-crops" style="grid-template-columns:repeat(3,1fr)">
         <div class="tcrop"><p class="tcrop-name">🌿 Papaya</p><p class="tcrop-det">3,500 trees · 4-season harvest · <strong>150–200 kg/tree/yr</strong> target · 10-Ha already producing</p></div>
-        <div class="tcrop"><p class="tcrop-name">🍌 Banana</p><p class="tcrop-det">7,000 mats · Weekly cash-flow anchor · Local &amp; regional wholesale</p></div>
-        <div class="tcrop"><p class="tcrop-name">🍍 Pineapple</p><p class="tcrop-det">6,000 slips · High-density · Propagated via slips for premium yield</p></div>
+        <div class="tcrop"><p class="tcrop-name">🍌 Banana</p><p class="tcrop-det">500 mats · Weekly cash-flow anchor · Local &amp; regional wholesale</p></div>
+        <div class="tcrop"><p class="tcrop-name">🍍 Pineapple</p><p class="tcrop-det">15,000 crowns · High-density · Propagated via crowns for premium yield</p></div>
+        <div class="tcrop"><p class="tcrop-name">☕ Arabic Coffee</p><p class="tcrop-det">2,000 shrubs · Shade-grown under canopy · Hand-stripped cherries</p></div>
+        <div class="tcrop"><p class="tcrop-name">🌶️ Khat (Ghat)</p><p class="tcrop-det">800 shrubs · Continuous leaf harvest · High-frequency local cash crop</p></div>
+        <div class="tcrop"><p class="tcrop-name">🍂 Cinnamon &amp; Curry Tree</p><p class="tcrop-det">700 Cinnamon · 500 Curry Tree · Bark &amp; leaf harvest · Spice wholesale</p></div>
       </div>
     </div>
 
     <div class="tier-block rv d2">
       <div class="tier-head">
         <div class="tier-num">T3</div>
-        <div><p class="tier-name">Mid-Term Orchards</p><p class="tier-win">Harvest in 2–3 Years · Market Diversification</p></div>
+        <div><p class="tier-name">Mid-Term Orchards, Citrus &amp; Vines</p><p class="tier-win">Harvest in 2–3 Years · Market Diversification</p></div>
         <span class="tier-tag">Regional &amp; Export</span>
       </div>
       <div class="tier-crops" style="grid-template-columns:repeat(4,1fr)">
-        <div class="tcrop"><p class="tcrop-name">🍋 Citrus</p><p class="tcrop-det">3,000 ea: Clementine, Lemon, Lime, Citron — 12,000 total</p></div>
-        <div class="tcrop"><p class="tcrop-name">🍑 Stone Fruits</p><p class="tcrop-det">3,000 ea: Peach, Nectarine, Cherry Plum — 9,000 trees</p></div>
-        <div class="tcrop"><p class="tcrop-name">🍈 Hardy Tropicals</p><p class="tcrop-det">2,500 Guava · 1,500 Jujube · 1,500 Strawberry Guava</p></div>
-        <div class="tcrop"><p class="tcrop-name">🍇 Isabella Vines</p><p class="tcrop-det">1,500 trellised vines · Purple &amp; green · Juice &amp; fresh</p></div>
+        <div class="tcrop"><p class="tcrop-name">🍋 Citrus</p><p class="tcrop-det">Lemon 1,800 · Clementine &amp; Lime 1,500 ea · Blood Orange &amp; Orange 1,200 ea · Citron/Etrog 800 — 8,000 total</p></div>
+        <div class="tcrop"><p class="tcrop-name">🍑 Stone Fruits</p><p class="tcrop-det">Apricot, Cherry Plum, Plum 1,500 ea · Nectarine 2,500 — 7,000 trees</p></div>
+        <div class="tcrop"><p class="tcrop-name">🍈 Hardy Tropicals</p><p class="tcrop-det">Guava 1,500 · Pomegranate 700 · Rose Apple 300 — 2,500 trees</p></div>
+        <div class="tcrop"><p class="tcrop-name">🍇 Isabella Vines &amp; Kiwi</p><p class="tcrop-det">6,500 Isabella Grape (Purple &amp; Green) · 1,800 Kiwi — 8,300 rootstocks on T-bar trellis</p></div>
       </div>
     </div>
 
     <div class="tier-block rv d3">
       <div class="tier-head">
         <div class="tier-num">T4</div>
-        <div><p class="tier-name">Premium Long-Term Assets</p><p class="tier-win">Harvest in 3–6 Years · Heavy-Hitting Elite Export Crops</p></div>
+        <div><p class="tier-name">Premium Long-Term &amp; Elite Export Assets</p><p class="tier-win">Harvest in 3–6 Years · Heavy-Hitting Elite Export Crops</p></div>
         <span class="tier-tag" style="color:var(--gold);background:rgba(200,133,10,.1)">Export Dominance</span>
       </div>
       <div class="tier-crops" style="grid-template-columns:repeat(6,1fr)">
-        <div class="tcrop"><p class="tcrop-name">🥑 Avocado</p><p class="tcrop-det">8,000 trees · $250–$400/tree/yr · UAE &amp; EU</p></div>
-        <div class="tcrop"><p class="tcrop-name">🍊 Orange</p><p class="tcrop-det">6,000 trees · Orange &amp; Blood Orange · Gulf &amp; EU</p></div>
-        <div class="tcrop"><p class="tcrop-name">🥭 Mango</p><p class="tcrop-det">5,000 trees · Top-grade export · Regional &amp; intl</p></div>
-        <div class="tcrop"><p class="tcrop-name">🍏 Apple &amp; Pear</p><p class="tcrop-det">3,000 ea · 6,000 trees · Premium retail</p></div>
-        <div class="tcrop"><p class="tcrop-name">🌴 Date Palm</p><p class="tcrop-det">1,500 palms · Perimeter · High-value dried export</p></div>
-        <div class="tcrop"><p class="tcrop-name">🍦 Annona</p><p class="tcrop-det">2,000 custard apple · Niche premium dessert market</p></div>
+        <div class="tcrop"><p class="tcrop-name">🥑 Avocado</p><p class="tcrop-det">3,500 trees · $250–$400/tree/yr · UAE &amp; EU</p></div>
+        <div class="tcrop"><p class="tcrop-name">🥭 Mango</p><p class="tcrop-det">2,500 trees · Top-grade export · Regional &amp; intl</p></div>
+        <div class="tcrop"><p class="tcrop-name">🍏 Apple &amp; Pear</p><p class="tcrop-det">Apple 2,500 · Pear 2,000 — 4,500 trees · Premium retail</p></div>
+        <div class="tcrop"><p class="tcrop-name">🍒 Peach &amp; Sweet Cherry</p><p class="tcrop-det">Peach 2,500 · Sweet Cherry 2,000 — 4,500 trees · High-density lattice · Luxury seasonal export</p></div>
+        <div class="tcrop"><p class="tcrop-name">🍦 Annona</p><p class="tcrop-det">1,500 custard apple · Niche premium dessert market</p></div>
+        <div class="tcrop"><p class="tcrop-name">🥜 Almond, Olive &amp; Walnut</p><p class="tcrop-det">Almond 1,200 · Olive 1,000 · Walnut 600 — 2,800 trees · Non-perishable, market-timed export</p></div>
       </div>
     </div>
 
@@ -836,7 +909,7 @@
       <div class="strat">
         <p class="strat-lbl">Intercropping Shield</p>
         <p class="strat-title">Zero Wasted Space During Tree Development</p>
-        <p class="strat-body">Fast-cycle Tier 1 vegetables planted in the wide alleys between slow-growing Tier 4 rows — generating immediate revenue while tree canopies develop over 3–5 years.</p>
+        <p class="strat-body">Fast-cycle Tier 1 vegetables and greenhouse berries planted in the wide alleys between slow-growing Tier 4 rows — generating immediate revenue while tree canopies develop over 3–5 years.</p>
       </div>
       <div class="strat">
         <p class="strat-lbl">Water Prioritisation</p>
@@ -847,6 +920,245 @@
         <p class="strat-lbl">Open-Field Massive Expansion</p>
         <p class="strat-title">Aggressive Scaling · 20–30 Ha Added Per Year</p>
         <p class="strat-body">An aggressive long-term land development programme brings 20 to 30 additional hectares under active cultivation each year — systematically converting the 100-hectare free expansion zone into a full-production estate at pace.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hdivide"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     UNIFIED 110-HECTARE MASTER PLAN
+══════════════════════════════════════════════════════════ -->
+<section id="masterplan" class="sec sec--alt">
+  <div class="wrap">
+    <div class="mp-head">
+      <div class="rv">
+        <span class="eyebrow">The Consolidated Master Table</span>
+        <div class="gold-bar"></div>
+        <h2 class="sec-title">One Unified<br>110-Hectare Plan</h2>
+      </div>
+      <div class="rv d2">
+        <p class="sec-body">Every cultivar, all 50–70 greenhouses, full livestock and aquaculture integration, and the social impact programme — synchronised into a single operating blueprint with precise densities and harvesting methods.</p>
+      </div>
+    </div>
+
+    <div class="mp-scroll rv">
+      <table class="mptable">
+        <thead>
+          <tr>
+            <th>Sector / Category</th>
+            <th>Target Cultivars &amp; Activities</th>
+            <th>Land Allocation</th>
+            <th>Cultivation Quantity</th>
+            <th>Commercial Harvesting Method</th>
+            <th>Strategic Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mp-sector">Greenhouses</td>
+            <td>Delicate Berries (Blackberry, Blueberries, Strawberry Guava) &amp; root sapling plugs</td>
+            <td class="mp-land">10 Ha</td>
+            <td class="mp-qty">30,000 bushes / plugs&#10;(across 50–70 structures)</td>
+            <td>Manual hand-plucking into sterile clamshell baskets</td>
+            <td>Highly protected, premium environment ensures zero blemish, top-dollar luxury export crops.</td>
+          </tr>
+          <tr>
+            <td class="mp-sector">Citrus Varieties</td>
+            <td>Blood Orange, Citron/Etrog, Clementine, Lemon, Lime, Orange</td>
+            <td class="mp-land">20 Ha</td>
+            <td class="mp-qty">8,000 grafted saplings</td>
+            <td>Hand-clipped with pruning shears, leaving the fruit button intact</td>
+            <td>Solid, long shelf-life items for cold-chain export and local juice manufacturing.</td>
+          </tr>
+          <tr>
+            <td class="mp-sector">Stone &amp; Pome Fruits</td>
+            <td>Apple, Apricot, Cherry Plum (Pluerry), Nectarine, Peach, Pear, Plum, Sweet Cherry</td>
+            <td class="mp-land">20 Ha</td>
+            <td class="mp-qty">16,000 trellised trees&#10;(high-density lattice spacing)</td>
+            <td>Hand-picked using padded picking aprons and platform lifts</td>
+            <td>Fast-turnover seasonal luxury fruits dominating high-end regional supermarkets and hospitality.</td>
+          </tr>
+          <tr>
+            <td class="mp-sector">Tropical &amp; Subtropical</td>
+            <td>Annona, Avocado, Banana, Guava, Mango, Papaya, Pineapple, Pomegranate, Rose Apple</td>
+            <td class="mp-land">25 Ha</td>
+            <td class="mp-qty">10,000 main canopy trees&#10;4,000 papaya/banana stems&#10;15,000 pineapple crowns</td>
+            <td>Pole-mounted clippers for high canopies; manual machete cutting for bananas</td>
+            <td>The primary global export engine — Hass Avocado and Keitt Mango generate foreign currency.</td>
+          </tr>
+          <tr>
+            <td class="mp-sector">Vines &amp; Climbers</td>
+            <td>Isabella Grape Vine (Purple &amp; Green varieties), Kiwi</td>
+            <td class="mp-land">5 Ha</td>
+            <td class="mp-qty">8,300 rootstocks&#10;(trained on high T-bar trellis networks)</td>
+            <td>Manual cluster-snapping with specialised vine shears</td>
+            <td>Highly productive footprint yielding premium table fruit, surplus routed to juices and jams.</td>
+          </tr>
+          <tr>
+            <td class="mp-sector">Nuts &amp; Unique Trees</td>
+            <td>Almond, Olive, Walnut</td>
+            <td class="mp-land">12 Ha</td>
+            <td class="mp-qty">2,800 trees&#10;(wide structural spacing)</td>
+            <td>Mechanical trunk-shakers over ground catching-canopies</td>
+            <td>Extremely low-risk asset — non-perishable storage allows precise timing of global export markets.</td>
+          </tr>
+          <tr>
+            <td class="mp-sector">Herbs, Spices &amp; Stimulants</td>
+            <td>Arabic Coffee, Cinnamon, Curry Tree, Khat (Ghat), Ginger, Sugar Cane, Turmeric</td>
+            <td class="mp-land">5 Ha</td>
+            <td class="mp-qty">4,000 shrub saplings&#10;200 kg root rhizomes</td>
+            <td>Root lifting for ginger/turmeric; selective hand-stripping for coffee cherries</td>
+            <td>Short-term revenue cycles — fast root/leaf crops fund early monthly farm operations while trees mature.</td>
+          </tr>
+          <tr>
+            <td class="mp-sector">Integrated Livestock</td>
+            <td>Sheep, Goats, Chickens</td>
+            <td class="mp-land">Free-roaming<br><span style="font-weight:400;font-size:.78rem;color:var(--gray)">(under tree canopies)</span></td>
+            <td class="mp-qty">Rotational livestock units&#10;(scaled to orchard floor capacity)</td>
+            <td>Continuous managed collection (eggs / dairy / meat)</td>
+            <td>Replaces costly mowing machinery and drops organic fertiliser, slashing overheads.</td>
+          </tr>
+          <tr>
+            <td class="mp-sector">Aquaculture Engine</td>
+            <td>Fish Farming (e.g. Tilapia, Catfish)</td>
+            <td class="mp-land">1 Ha</td>
+            <td class="mp-qty">25,000–30,000 fish fingerlings</td>
+            <td>Seining nets across engineered water retention ponds</td>
+            <td>The nitrogen hub — pond waste water cycles directly into greenhouse irrigation as free fertiliser.</td>
+          </tr>
+          <tr>
+            <td class="mp-sector">Apiculture Network</td>
+            <td>Honey Production (Beekeeping)</td>
+            <td class="mp-land">Integrated</td>
+            <td class="mp-qty">100–150 managed beehives</td>
+            <td>Centrifugal extraction of framed honey supers</td>
+            <td>The yield multiplier — increases farm-wide pollination and fruit set by up to 30%.</td>
+          </tr>
+          <tr>
+            <td class="mp-sector">Social Impact Programme</td>
+            <td>Youth Employment &amp; Development (Young Men &amp; Women)</td>
+            <td class="mp-land">Whole Farm</td>
+            <td class="mp-qty">Targeted local training placements</td>
+            <td>Ongoing agricultural skill certification and field leadership</td>
+            <td>Qualifies the entire 110-hectare project for international ESG grants.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mp-foot rv">
+      <p class="mp-foot-title">Key Operational Takeaway</p>
+      <p class="mp-foot-body">Viewed as a single interconnected ecosystem, the estate avoids overlapping resources at every turn: <strong>fish ponds</strong> feed the <strong>greenhouses</strong>, <strong>livestock</strong> clear and fertilise the <strong>citrus and nut orchards</strong>, <strong>beehives</strong> maximise <strong>fruit yields</strong> across every tier, and the <strong>workforce</strong> stays consistently employed across changing harvest seasons all year round.</p>
+    </div>
+  </div>
+</section>
+
+<div class="hdivide"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PERMACULTURE BORDER
+══════════════════════════════════════════════════════════ -->
+<section id="permaculture" class="sec">
+  <div class="wrap">
+    <div class="crops-head">
+      <div class="rv">
+        <span class="eyebrow">Secondary Component · Living Infrastructure</span>
+        <div class="gold-bar"></div>
+        <h2 class="sec-title">A Permaculture<br>Border &amp; Windbreak</h2>
+      </div>
+      <div class="rv d2">
+        <p class="sec-body">A multi-tiered permaculture border wraps the full 110-hectare perimeter — an impenetrable living fence that doubles as an effective windbreak, protecting every internal crop tier. Baobab, Moringa, and Neem trees combine with Aloe Vera and select ornamental species in a single-line, layered design that lifts wind up and over the farm.</p>
+      </div>
+    </div>
+
+    <div class="pc-stats rv">
+      <div class="pc-stat"><div class="pc-stat-num">4,200 m</div><div class="pc-stat-lbl">Total Perimeter</div></div>
+      <div class="pc-stat"><div class="pc-stat-num">4</div><div class="pc-stat-lbl">Planting Tiers</div></div>
+      <div class="pc-stat"><div class="pc-stat-num">23,840</div><div class="pc-stat-lbl">Total Plants &amp; Trees</div></div>
+      <div class="pc-stat"><div class="pc-stat-num">$10K–$12.5K</div><div class="pc-stat-lbl">Setup Cost Estimate</div></div>
+    </div>
+
+    <p class="eyebrow" style="margin-bottom:1.2rem">The Layered Windbreak — Single-Line Cross-Section</p>
+    <div class="pc-band rv">
+      <div class="pc-band-seg" style="background:#8a9c5a;flex:0.6"><p class="pc-tier-lbl">Tier 1 · Ground</p><p class="pc-tier-name">Aloe Vera</p><p class="pc-tier-sp">0.3m spacing</p></div>
+      <div class="pc-band-seg" style="background:#5f8a4a;flex:1"><p class="pc-tier-lbl">Tier 2 · Living Fence</p><p class="pc-tier-name">Moringa Oleifera</p><p class="pc-tier-sp">0.5m spacing, hedge-pruned</p></div>
+      <div class="pc-band-seg" style="background:#2f6b3c;flex:1.6"><p class="pc-tier-lbl">Tier 3 · Canopy Windbreak</p><p class="pc-tier-name">Neem Trees</p><p class="pc-tier-sp">4m spacing</p></div>
+      <div class="pc-band-seg" style="background:var(--forest);flex:2.2"><p class="pc-tier-lbl">Structural Anchors</p><p class="pc-tier-name">Baobab Trees</p><p class="pc-tier-sp">30m spacing + interspersed ornamentals</p></div>
+    </div>
+
+    <div class="pc-grid rv">
+      <div class="pc-card">
+        <div class="pc-card-icon">🌵</div>
+        <p class="pc-card-name">Aloe Vera</p>
+        <p class="pc-card-qty">14,000 pups</p>
+        <p class="pc-card-body">Tier 1 ground barrier, spaced 0.3m apart. Acts as a firebreak, prevents soil erosion, and stops burrowing pests at the perimeter line.</p>
+      </div>
+      <div class="pc-card">
+        <div class="pc-card-icon">🌿</div>
+        <p class="pc-card-name">Moringa Oleifera</p>
+        <p class="pc-card-qty">8,400 seedlings</p>
+        <p class="pc-card-body">Tier 2 high-density living fence, spaced 0.5m apart. Fast-growing and woven or aggressively pruned into a thick, impenetrable hedge.</p>
+      </div>
+      <div class="pc-card">
+        <div class="pc-card-icon">🌳</div>
+        <p class="pc-card-name">Neem Trees</p>
+        <p class="pc-card-qty">1,050 seedlings</p>
+        <p class="pc-card-body">Tier 3 primary canopy windbreak, spaced 4m apart. Dense mid-to-high level wind deflection that protects internal crop tiers.</p>
+      </div>
+      <div class="pc-card">
+        <div class="pc-card-icon">🌴</div>
+        <p class="pc-card-name">Baobab Trees</p>
+        <p class="pc-card-qty">140 seedlings</p>
+        <p class="pc-card-body">Structural anchors spaced 30m apart. Long-term canopy structure and landmark points along the full perimeter line.</p>
+      </div>
+      <div class="pc-card">
+        <div class="pc-card-icon">🌺</div>
+        <p class="pc-card-name">Native Ornamentals</p>
+        <p class="pc-card-qty">250 seedlings</p>
+        <p class="pc-card-body">Interspersed flowering and fruiting species that maximise biodiversity and pollinator support along the border.</p>
+      </div>
+    </div>
+
+    <div class="pc-tables">
+      <div class="rv">
+        <p class="eyebrow" style="margin-bottom:1.2rem">Species Allocation</p>
+        <table class="btable">
+          <thead>
+            <tr><th>Species</th><th>Purpose</th><th>Spacing</th><th>Qty</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Aloe Vera</td><td>Ground barrier &amp; firebreak</td><td>0.3 m</td><td class="amt">14,000</td></tr>
+            <tr><td>Moringa</td><td>High-density living fence</td><td>0.5 m</td><td class="amt">8,400</td></tr>
+            <tr><td>Neem Trees</td><td>Primary canopy windbreak</td><td>4.0 m</td><td class="amt">1,050</td></tr>
+            <tr><td>Baobab Trees</td><td>Structural anchors &amp; landmarks</td><td>30.0 m</td><td class="amt">140</td></tr>
+            <tr><td>Ornamentals</td><td>Biodiversity &amp; pollinators</td><td>Interspersed</td><td class="amt">250</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><td colspan="3"><strong>Total Plants &amp; Trees</strong></td><td class="amt">23,840</td></tr>
+          </tfoot>
+        </table>
+      </div>
+      <div class="rv d1">
+        <p class="eyebrow" style="margin-bottom:1.2rem">Setup Cost Estimate — Wholesale Agroforestry Rates</p>
+        <table class="btable">
+          <thead>
+            <tr><th>Item</th><th>Unit Price</th><th>Total</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Aloe Vera Pups</td><td>$0.20 each</td><td class="amt">$2,800</td></tr>
+            <tr><td>Moringa</td><td>$0.10 per spot</td><td class="amt">$840</td></tr>
+            <tr><td>Neem Seedlings</td><td>$1.50 each</td><td class="amt">$1,575</td></tr>
+            <tr><td>Baobab Seedlings</td><td>$7.00 each</td><td class="amt">$980</td></tr>
+            <tr><td>Ornamental Trees</td><td>$4.00 each</td><td class="amt">$1,000</td></tr>
+            <tr><td>Subtotal — Plants Only</td><td></td><td class="amt">$7,195</td></tr>
+            <tr><td>Drip Irrigation &amp; Labor</td><td>Digging, compost, early watering</td><td class="amt">$3,000–$5,000</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><td colspan="2"><strong>Total Estimate</strong></td><td class="amt">$10,000–$12,500</td></tr>
+          </tfoot>
+        </table>
       </div>
     </div>
   </div>
@@ -1021,40 +1333,115 @@
 ══════════════════════════════════════════════════════════ -->
 <section id="workforce" class="sec sec--alt">
   <div class="wrap">
-    <div style="margin-bottom:3.5rem">
+    <div style="margin-bottom:3rem">
       <span class="eyebrow rv">Agro-Squad Workforce Model</span>
       <div class="gold-bar rv"></div>
-      <h2 class="sec-title rv">60 Local Youth Workers.<br><em style="font-family:var(--serif);font-style:italic;color:var(--green2)">4 Professional Squads.</em></h2>
-      <p class="sec-body rv d1">Local unemployed youth mobilised into a disciplined, multi-tiered workforce under 3 professional Agricultural Leads. The "Show, Do, Teach" model builds certified experts from within.</p>
+      <h2 class="sec-title rv">1,000 Local Workers.<br><em style="font-family:var(--serif);font-style:italic;color:var(--green2)">12 Operating Departments.</em></h2>
+      <p class="sec-body rv d1">Local youth and adults mobilised into a disciplined, full-scale departmental workforce — every sector of the master plan staffed end-to-end, from nursery propagation through harvesting, packaging, livestock, aquaculture, apiculture, and market delivery. Each department reports to a dedicated manager under a compact senior leadership team.</p>
     </div>
-    <div class="wf-grid">
+
+    <div class="wf-stats rv">
+      <div class="wf-stat"><div class="wf-stat-num">1,000</div><div class="wf-stat-lbl">Total Workforce</div></div>
+      <div class="wf-stat"><div class="wf-stat-num">980</div><div class="wf-stat-lbl">Frontline Workers</div></div>
+      <div class="wf-stat"><div class="wf-stat-num">12</div><div class="wf-stat-lbl">Department Managers</div></div>
+      <div class="wf-stat"><div class="wf-stat-num">8</div><div class="wf-stat-lbl">Senior Leadership</div></div>
+    </div>
+
+    <div class="dept-grid rv">
+      <div class="dept">
+        <div class="dept-top"><p class="dept-name">Nursery &amp; Propagation</p><div class="dept-cnt">60<span>workers</span></div></div>
+        <span class="dept-mgr">1 Manager</span>
+        <p class="dept-duty">Seed starting, grafting, cutting propagation, and seedling hardening feeding every crop tier and the greenhouse berry programme.</p>
+      </div>
+      <div class="dept">
+        <div class="dept-top"><p class="dept-name">Greenhouse Cultivation</p><div class="dept-cnt">140<span>workers</span></div></div>
+        <span class="dept-mgr">1 Manager</span>
+        <p class="dept-duty">Transplanting, pruning, staking, pest scouting, and rolling 2-week vegetable &amp; berry cycles across all 50–70 structures.</p>
+      </div>
+      <div class="dept">
+        <div class="dept-top"><p class="dept-name">Open-Field Cultivators</p><div class="dept-cnt">150<span>workers</span></div></div>
+        <span class="dept-mgr">1 Manager</span>
+        <p class="dept-duty">Tree-hole digging, planting, mulching, weeding, and pruning across citrus, stone &amp; pome, tropical, vine, and nut blocks.</p>
+      </div>
+      <div class="dept">
+        <div class="dept-top"><p class="dept-name">Irrigation &amp; Water Pump Crews</p><div class="dept-cnt">70<span>workers</span></div></div>
+        <span class="dept-mgr">1 Manager</span>
+        <p class="dept-duty">Pump house monitoring, filter clearing, pipeline repair, and fertigation dosing — keeping water flowing to every tree on the estate.</p>
+      </div>
+      <div class="dept">
+        <div class="dept-top"><p class="dept-name">Harvesting Crews</p><div class="dept-cnt">180<span>workers</span></div></div>
+        <span class="dept-mgr">1 Manager</span>
+        <p class="dept-duty">Hand-picking, pole-clipping, and machete-cutting fruit, nuts and vegetables from the trees on a rolling daily harvest schedule.</p>
+      </div>
+      <div class="dept">
+        <div class="dept-top"><p class="dept-name">Washing, Grading &amp; Packaging</p><div class="dept-cnt">120<span>workers</span></div></div>
+        <span class="dept-mgr">1 Manager</span>
+        <p class="dept-duty">Post-harvest washing, cleaning, sorting, grading, and clamshell/crate packing of all fruit and vegetables for market.</p>
+      </div>
+      <div class="dept">
+        <div class="dept-top"><p class="dept-name">Sheep, Goats &amp; Poultry</p><div class="dept-cnt">60<span>workers</span></div></div>
+        <span class="dept-mgr">1 Manager</span>
+        <p class="dept-duty">Daily rotational grazing management, feeding, health checks, egg collection, and manure processing across the orchard floors.</p>
+      </div>
+      <div class="dept">
+        <div class="dept-top"><p class="dept-name">Fish Farmers (Aquaculture)</p><div class="dept-cnt">35<span>workers</span></div></div>
+        <span class="dept-mgr">1 Manager</span>
+        <p class="dept-duty">Pond water-quality monitoring, feeding schedules, seining-net harvesting, and fingerling stock management across 25,000–30,000 fish.</p>
+      </div>
+      <div class="dept">
+        <div class="dept-top"><p class="dept-name">Bee &amp; Honey Crews</p><div class="dept-cnt">25<span>workers</span></div></div>
+        <span class="dept-mgr">1 Manager</span>
+        <p class="dept-duty">Hive inspection, swarm management, frame rotation, and centrifugal honey extraction across 100–150 managed beehives.</p>
+      </div>
+      <div class="dept">
+        <div class="dept-top"><p class="dept-name">Maintenance &amp; Infrastructure</p><div class="dept-cnt">50<span>workers</span></div></div>
+        <span class="dept-mgr">1 Manager</span>
+        <p class="dept-duty">Greenhouse structure repair, trellis and lattice upkeep, fencing, tool servicing, and general estate-wide repairs.</p>
+      </div>
+      <div class="dept">
+        <div class="dept-top"><p class="dept-name">Drivers &amp; Market Logistics</p><div class="dept-cnt">50<span>workers</span></div></div>
+        <span class="dept-mgr">1 Manager</span>
+        <p class="dept-duty">Truck fleet operation delivering fresh produce, livestock products, and honey from the packhouse to wholesale markets and export points.</p>
+      </div>
+      <div class="dept">
+        <div class="dept-top"><p class="dept-name">Security &amp; Estate Operations</p><div class="dept-cnt">40<span>workers</span></div></div>
+        <span class="dept-mgr">1 Manager</span>
+        <p class="dept-duty">Perimeter security, gate control, night watch, and asset protection across the full 110-hectare estate.</p>
+      </div>
+    </div>
+
+    <div class="leadership-band rv d1">
+      <div class="lead-cell"><div class="lead-cnt">1</div><div class="lead-title">Estate Director</div></div>
+      <div class="lead-cell"><div class="lead-cnt">1</div><div class="lead-title">Deputy Director — Crop Operations</div></div>
+      <div class="lead-cell"><div class="lead-cnt">1</div><div class="lead-title">Deputy Director — Livestock &amp; Aquaculture</div></div>
+      <div class="lead-cell"><div class="lead-cnt">2</div><div class="lead-title">HR, Payroll &amp; Worker Welfare</div></div>
+      <div class="lead-cell"><div class="lead-cnt">2</div><div class="lead-title">Quality Assurance &amp; Export Compliance</div></div>
+      <div class="lead-cell"><div class="lead-cnt">1</div><div class="lead-title">Finance &amp; Procurement</div></div>
+    </div>
+
+    <div class="wf-grid" style="margin-top:3.5rem">
       <div>
-        <div class="squad-cards rv">
-          <div class="squad"><div class="squad-cnt">20<span>workers</span></div><div><p class="squad-name">Veggie &amp; Greenhouse Squad</p><p class="squad-duty">Seedling prep, weeding, staking, greenhouse pruning, and rolling 2-week vegetable planting schedules across all 13 (→70) greenhouses.</p></div></div>
-          <div class="squad"><div class="squad-cnt">20<span>workers</span></div><div><p class="squad-name">Orchard &amp; Agroforestry Squad</p><p class="squad-duty">Tree hole digging, organic composting, staking, mulching, and pruning for the 82,100 permanent orchard plants across all four crop tiers.</p></div></div>
-          <div class="squad"><div class="squad-cnt">10<span>workers</span></div><div><p class="squad-name">Hydro-Water &amp; Infrastructure Squad</p><p class="squad-duty">Pump house monitoring, filter clearing, pipeline leak repair, fertigation management and block valve control across the full drip network.</p></div></div>
-          <div class="squad"><div class="squad-cnt">10<span>workers</span></div><div><p class="squad-name">Packhouse, Logistics &amp; Integration</p><p class="squad-duty">Post-harvest washing, fast-food grading, livestock management (sheep, goats, chickens), aquaculture ponds and beehive operations.</p></div></div>
-        </div>
+        <p class="eyebrow" style="margin-bottom:1.4rem">Certification Career Path</p>
         <div class="cert-path rv d2">
           <div class="cert-level"><div class="cert-level-num">L1</div><div class="cert-level-title">Certified Cultivator</div></div>
-          <div class="cert-level"><div class="cert-level-num">L2</div><div class="cert-level-title">Drip Technician</div></div>
+          <div class="cert-level"><div class="cert-level-num">L2</div><div class="cert-level-title">Department Technician</div></div>
           <div class="cert-level"><div class="cert-level-num">L3</div><div class="cert-level-title">Quality Specialist</div></div>
-          <div class="cert-level"><div class="cert-level-num">L4</div><div class="cert-level-title">Squad Leader</div></div>
+          <div class="cert-level"><div class="cert-level-num">L4</div><div class="cert-level-title">Department Manager</div></div>
+        </div>
+        <div class="training-box">
+          <p class="training-box-lbl">Training Protocol</p>
+          <p><strong>15%</strong> Classroom · <strong>35%</strong> Field Practicals · <strong>50%</strong> Peer-to-Peer</p>
+          <p class="training-note">Experienced workers train new entries — knowledge compounds inside each department, reducing reliance on outside consultants over time. Tiered L1→L4 certification career path in every one of the 12 departments.</p>
         </div>
       </div>
       <div class="rv d2">
         <p class="eyebrow" style="margin-bottom:1.4rem">Daily SOP Timeline</p>
         <div class="sop-list">
-          <div class="sop-row"><p class="sop-time">06:00–06:30</p><p class="sop-act"><strong>Morning Briefing</strong><br><em>Review orders, allocate harvesting targets by squad</em></p></div>
+          <div class="sop-row"><p class="sop-time">06:00–06:30</p><p class="sop-act"><strong>Morning Briefing</strong><br><em>Department managers review orders, allocate harvesting and delivery targets</em></p></div>
           <div class="sop-row"><p class="sop-time">06:30–11:30</p><p class="sop-act"><strong>Core Field Execution</strong><br><em>Cool-hours harvesting for optimal shelf life; primary drip irrigation run; greenhouse cycles</em></p></div>
           <div class="sop-row"><p class="sop-time">11:30–14:30</p><p class="sop-act"><strong>Midday Heat Shelter &amp; Training</strong><br><em>Tool maintenance, packhouse cleaning, 1-hour structured training session out of direct sun</em></p></div>
-          <div class="sop-row"><p class="sop-time">14:30–17:30</p><p class="sop-act"><strong>Planting &amp; Maintenance</strong><br><em>Pit digging, transplanting seedlings, lateral drip maintenance, orchard work</em></p></div>
-          <div class="sop-row"><p class="sop-time">17:30–18:00</p><p class="sop-act"><strong>Harvest Logging &amp; Lockup</strong><br><em>Yield data entry, pump station securement, daily report to leads</em></p></div>
-        </div>
-        <div class="training-box">
-          <p class="training-box-lbl">Training Protocol</p>
-          <p><strong>15%</strong> Classroom · <strong>35%</strong> Field Practicals · <strong>50%</strong> Peer-to-Peer</p>
-          <p class="training-note">Experienced youth train new entries — knowledge compounds inside the team, reducing reliance on outside consultants over time. Tiered L1→L4 certification career path.</p>
+          <div class="sop-row"><p class="sop-time">14:30–17:30</p><p class="sop-act"><strong>Planting, Packing &amp; Dispatch</strong><br><em>Pit digging, transplanting, lateral drip maintenance, packhouse grading, truck loading for market runs</em></p></div>
+          <div class="sop-row"><p class="sop-time">17:30–18:00</p><p class="sop-act"><strong>Harvest Logging &amp; Lockup</strong><br><em>Yield data entry, pump station securement, daily report from every department manager to the Estate Director</em></p></div>
         </div>
       </div>
     </div>
@@ -1075,14 +1462,15 @@
         <h2 class="sec-title">Beyond the Orchard:<br>A Full Ecosystem</h2>
       </div>
       <div class="rv d2">
-        <p class="sec-body">Livestock, fish, and bees turn farm waste into revenue and farm inputs into profit — a closed-loop system that dramatically reduces external supply costs and adds multiple income streams.</p>
+        <p class="sec-body">Livestock, fish, bees, and people turn farm waste into revenue and farm inputs into profit — a closed-loop system that dramatically reduces external supply costs and adds multiple income streams, fully aligned with the master plan's integrated sectors.</p>
       </div>
     </div>
     <div class="eco-grid rv">
-      <div class="eco-card"><div class="eco-icon-wrap">🐑</div><p class="eco-title">Sheep &amp; Goats</p><p class="eco-body">Grazing in cleared orchard alleys keeps vegetation down at zero cost. Manure is processed into organic compost for fertigation.</p></div>
-      <div class="eco-card"><div class="eco-icon-wrap">🐓</div><p class="eco-title">Poultry</p><p class="eco-body">Chickens provide pest control in vegetable zones, eggs for local sale, and high-nitrogen litter for soil amendment.</p></div>
-      <div class="eco-card"><div class="eco-icon-wrap">🐟</div><p class="eco-title">Freshwater Aquaculture</p><p class="eco-body">On-farm fish ponds turn surplus irrigation water into a protein crop. Nutrient-rich pond water cycles back into the drip fertigation system.</p></div>
-      <div class="eco-card"><div class="eco-icon-wrap">🍯</div><p class="eco-title">Apiculture (Bees)</p><p class="eco-body">Beehives drive pollination efficiency across all fruit tree tiers. Honey production adds a premium branded product line for local and export markets.</p></div>
+      <div class="eco-card"><div class="eco-icon-wrap">🐑</div><p class="eco-title">Sheep &amp; Goats</p><p class="eco-body">Rotational livestock units, scaled to orchard floor capacity, free-roam under tree canopies. Grazing keeps vegetation down at zero cost; manure is processed into organic compost for fertigation.</p></div>
+      <div class="eco-card"><div class="eco-icon-wrap">🐓</div><p class="eco-title">Poultry</p><p class="eco-body">Chickens integrated into the same rotational system provide pest control in vegetable zones, eggs for local sale, and high-nitrogen litter for soil amendment via continuous managed collection.</p></div>
+      <div class="eco-card"><div class="eco-icon-wrap">🐟</div><p class="eco-title">Freshwater Aquaculture</p><p class="eco-body">1 Ha of engineered retention ponds stocked with 25,000–30,000 Tilapia and Catfish fingerlings. Nutrient-rich pond water cycles directly into the greenhouse drip fertigation system as free fertiliser.</p></div>
+      <div class="eco-card"><div class="eco-icon-wrap">🍯</div><p class="eco-title">Apiculture (Bees)</p><p class="eco-body">100–150 managed beehives drive pollination efficiency across all fruit tree tiers, lifting farm-wide fruit set by up to 30%. Honey production adds a premium branded product line for local and export markets.</p></div>
+      <div class="eco-card"><div class="eco-icon-wrap">🌱</div><p class="eco-title">Social Impact Programme</p><p class="eco-body">Targeted local training placements give young men and women ongoing agricultural skill certification and field leadership experience across every harvest season — qualifying the estate for international ESG grants.</p></div>
     </div>
   </div>
 </section>
@@ -1101,7 +1489,7 @@
         <h2 class="sec-title">Full Setup Budget<br>&amp; Allocation</h2>
       </div>
       <div class="rv d2">
-        <p class="sec-body">Every line item reflects the realistic cost of building a 100-hectare professional agricultural operation from a free-water land base. Total range: <strong>$473,500 – $668,000</strong>.</p>
+        <p class="sec-body">Fully reconciled against the unified 110-hectare master plan — every cultivar tier, all 50–70 greenhouses, trellis and irrigation infrastructure, the complete integrated ecosystem, and the permaculture border. Total range: <strong>$918,945 – $1,390,895</strong>.</p>
       </div>
     </div>
     <table class="btable rv">
@@ -1109,16 +1497,35 @@
         <tr><th>Category</th><th>Description</th><th>Low Est.</th><th>High Est.</th></tr>
       </thead>
       <tbody>
-        <tr><td>Vegetable Seeds &amp; Tubers</td><td>Lettuce, cucumber, tomato, potato, onion — Tier 1 fast cycles</td><td class="amt">$5,000</td><td class="amt">$8,000</td></tr>
-        <tr><td>Citrus Varieties (18,000 trees)</td><td>Clementine, Lemon, Lime, Citron — certified grafted stock</td><td class="amt">$90,000</td><td class="amt">$126,000</td></tr>
-        <tr><td>Stone Fruits &amp; Pomes (24,000 trees)</td><td>Peach, Nectarine, Cherry Plum, Apple, Pear</td><td class="amt">$144,000</td><td class="amt">$192,000</td></tr>
-        <tr><td>Large &amp; High-Density Tropicals (29,100)</td><td>Avocado, Mango, Banana, Pineapple, Date Palm, Annona</td><td class="amt">$125,000</td><td class="amt">$173,500</td></tr>
-        <tr><td>Berries &amp; Small Tropicals (4,500)</td><td>Guava, Strawberry Guava, Jujube, Isabella Grape</td><td class="amt">$34,500</td><td class="amt">$55,500</td></tr>
+        <tr><td colspan="4" style="font-family:var(--serif);font-weight:700;color:var(--gold);font-size:.95rem;background:rgba(200,133,10,.06)">Planting Stock — All Crop Tiers</td></tr>
+        <tr><td>Vegetable Seeds &amp; Tubers</td><td>Lettuce, cucumber, tomato, potato, onion, capsicum — Tier 1 fast cycles</td><td class="amt">$5,000</td><td class="amt">$8,000</td></tr>
+        <tr><td>Greenhouse Berries (30,000 bushes/plugs)</td><td>Blackberry, Blueberry, Strawberry Guava — protected cultivation stock</td><td class="amt">$75,000</td><td class="amt">$126,000</td></tr>
+        <tr><td>Root Spice Rhizomes &amp; Cane</td><td>200 kg Ginger/Turmeric rhizomes; 1,000 Sugar Cane setts</td><td class="amt">$3,000</td><td class="amt">$5,500</td></tr>
+        <tr><td>Herb, Spice &amp; Stimulant Shrubs (4,000)</td><td>Arabic Coffee, Cinnamon, Curry Tree, Khat (Ghat) — shade-grown stock</td><td class="amt">$20,000</td><td class="amt">$32,000</td></tr>
+        <tr><td>Citrus Varieties (8,000 trees)</td><td>Blood Orange, Citron/Etrog, Clementine, Lemon, Lime, Orange — grafted saplings</td><td class="amt">$72,000</td><td class="amt">$104,000</td></tr>
+        <tr><td>Stone &amp; Pome Fruits (16,000 trees)</td><td>Apple, Apricot, Cherry Plum, Nectarine, Peach, Pear, Plum, Sweet Cherry</td><td class="amt">$144,000</td><td class="amt">$192,000</td></tr>
+        <tr><td>Tropical Canopy &amp; Stem Crops (29,000)</td><td>Avocado, Annona, Guava, Mango, Papaya/Banana stems, Pineapple crowns, Pomegranate, Rose Apple</td><td class="amt">$116,000</td><td class="amt">$188,500</td></tr>
+        <tr><td>Vines &amp; Climbers (8,300 rootstocks)</td><td>Isabella Grape (Purple &amp; Green), Kiwi — T-bar trellis stock</td><td class="amt">$49,800</td><td class="amt">$74,700</td></tr>
+        <tr><td>Nuts &amp; Unique Trees (2,800 trees)</td><td>Almond, Olive, Walnut — wide-spacing structural stock</td><td class="amt">$39,200</td><td class="amt">$56,000</td></tr>
+
+        <tr><td colspan="4" style="font-family:var(--serif);font-weight:700;color:var(--gold);font-size:.95rem;background:rgba(200,133,10,.06)">Structural &amp; Field Infrastructure</td></tr>
+        <tr><td>Greenhouse Structures (50–70 units)</td><td>Steel-frame poly/shade-net houses, ventilation, benching — phased build-out</td><td class="amt">$210,000</td><td class="amt">$330,000</td></tr>
+        <tr><td>Trellis &amp; Lattice Systems</td><td>High-density lattice for stone/pome rows, T-bar trellis for vines, staking</td><td class="amt">$35,000</td><td class="amt">$52,000</td></tr>
         <tr><td>Core Irrigation Infrastructure</td><td>Pumps, sand/disc filters, HDPE mains, drip tape/tubes, Venturi fertigation</td><td class="amt">$60,000</td><td class="amt">$88,000</td></tr>
-        <tr><td>Field Labor &amp; Land Preparation</td><td>Clearing, raised beds, pit digging, fencing — 100-hectare preparation</td><td class="amt">$15,000</td><td class="amt">$25,000</td></tr>
+        <tr><td>Field Labor &amp; Land Preparation</td><td>Clearing, raised beds, pit digging, fencing — 110-hectare preparation</td><td class="amt">$18,000</td><td class="amt">$28,000</td></tr>
+
+        <tr><td colspan="4" style="font-family:var(--serif);font-weight:700;color:var(--gold);font-size:.95rem;background:rgba(200,133,10,.06)">Integrated Ecosystem</td></tr>
+        <tr><td>Aquaculture Pond Engineering</td><td>1 Ha engineered retention ponds, liners, aeration, plus 25,000–30,000 fingerlings</td><td class="amt">$22,000</td><td class="amt">$32,000</td></tr>
+        <tr><td>Apiculture Network (100–150 hives)</td><td>Langstroth hives, frames, centrifugal extraction equipment</td><td class="amt">$13,750</td><td class="amt">$20,000</td></tr>
+        <tr><td>Integrated Livestock Start-Up</td><td>Sheep, goat &amp; poultry breeding stock, rotational shelters, fencing, veterinary programme</td><td class="amt">$18,000</td><td class="amt">$28,000</td></tr>
+        <tr><td>Social Impact Programme Setup</td><td>Training facility, certification curriculum, field-leadership stipends — Year 1</td><td class="amt">$8,000</td><td class="amt">$14,000</td></tr>
+
+        <tr><td colspan="4" style="font-family:var(--serif);font-weight:700;color:var(--gold);font-size:.95rem;background:rgba(200,133,10,.06)">Permaculture Border (Secondary Component)</td></tr>
+        <tr><td>Living Fence &amp; Windbreak Planting Stock</td><td>14,000 Aloe Vera, 8,400 Moringa, 1,050 Neem, 140 Baobab, 250 Ornamentals — 4,200m perimeter</td><td class="amt">$7,195</td><td class="amt">$7,195</td></tr>
+        <tr><td>Border Drip Irrigation &amp; Labor</td><td>Digging, compost, and early-stage watering along the full perimeter line</td><td class="amt">$3,000</td><td class="amt">$5,000</td></tr>
       </tbody>
       <tfoot>
-        <tr><td colspan="2"><strong>Grand Total Launch Budget</strong></td><td class="amt">$473,500</td><td class="amt">$668,000</td></tr>
+        <tr><td colspan="2"><strong>Grand Total Launch Budget</strong></td><td class="amt">$918,945</td><td class="amt">$1,390,895</td></tr>
       </tfoot>
     </table>
   </div>
@@ -1139,7 +1546,7 @@
         <div class="tl-marker"></div>
         <p class="tl-year">Year 1</p>
         <h3 class="tl-title">Fast Cash &amp; Foundation</h3>
-        <p class="tl-body">Scale 13 operating greenhouses toward 50+ with Tier 1 vegetable cycles. Establish 6-inch HDPE mains and pump station. Plant Tier 2 tropicals. Onboard all 60 youth workers.</p>
+        <p class="tl-body">Scale 13 operating greenhouses toward 50+ with Tier 1 vegetable cycles. Establish 6-inch HDPE mains and pump station. Plant Tier 2 tropicals. Begin phased onboarding toward the full 1,000-person workforce across all 12 departments.</p>
       </div>
       <div class="tl-item rv d1">
         <div class="tl-marker"></div>
